@@ -1,0 +1,181 @@
+ /*-------------------- Header ------------------------- */
+ 
+ header {
+     width: 100%;
+     padding: 5px 24px 20px 10px;
+     position: fixed;
+     margin: 0px;
+ }
+ 
+ #headerContents {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+ }
+ 
+ #headerLeft {
+     display: flex;
+ }
+ 
+ #headerRight {
+     width: max-content;
+     display: flex;
+     margin-right: 30px;
+     padding: 10px;
+     justify-items: space-between;
+ }
+ 
+ #headerRightLeft>a {
+     margin: 0px;
+     padding: 0px 30px 0px 0px;
+     font-size: 13px;
+     text-decoration: none;
+     border-bottom: 1px solid black;
+     color: rgb(41, 41, 41);
+     font-weight: 700;
+     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+     font-stretch: ultra-condensed;
+ }
+ 
+ #headerRightRight {
+     display: flex;
+     margin-left: 100px;
+ }
+ 
+ #headerRightRight>a {
+     text-decoration: none;
+     padding: 0px 10px 0px 10px;
+     font-size: 13px;
+     color: rgb(41, 41, 41);
+     font-weight: 100;
+     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+     font-stretch: ultra-condensed;
+ }
+ 
+ #menu {
+     width: 35px;
+     height: 35px;
+     margin-right: 30px;
+ }
+ 
+ #logo {
+     width: 212px;
+ }
+ /*-------------------- Header End------------------------- */
+ /*------------- Modal ---------------*/
+ 
+ .menuOpacity {
+     animation: opac 0.8s
+ }
+ 
+ @keyframes opac {
+     from {
+         opacity: 0
+     }
+     to {
+         opacity: 1
+     }
+ }
+ 
+ .animatedMenuShow {
+     animation: show 0.8s;
+     animation-fill-mode: forwards;
+ }
+ 
+ @keyframes show {
+     0% {
+         opacity: 1
+     }
+     100% {
+         opacity: 0
+     }
+ }
+ 
+ #menuModal {
+     display: none;
+     position: fixed;
+     z-index: 1;
+     padding-top: 100px;
+ }
+ 
+ #menuTop>ul {
+     padding-left: 0px;
+     display: flex;
+ }
+ 
+ li {
+     list-style: none;
+     padding: 0px 5px 0px 17px;
+     font-size: 13px;
+     color: rgb(75, 75, 75);
+     font-weight: 70;
+     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+     font-stretch: ultra-condensed;
+ }
+ 
+ #selected {
+     font-weight: bold;
+ }
+ 
+ #emptySpace {
+     height: 100px;
+ }
+ 
+ #menuHeader {
+     background-color: white;
+     position: fixed;
+     width: max-content;
+ }
+ 
+ #menuOptions {
+     position: fixed;
+     overflow: hidden;
+     max-height: 380px;
+     width: 25%;
+ }
+ 
+ #menuOptions:hover {
+     overflow-y: scroll;
+ }
+ 
+ #menuMainOptions>ul {
+     padding-left: 10px;
+     padding-right: 10px;
+ }
+ 
+ #menuMainOptions>ul>li>a {
+     text-decoration: none;
+     font-size: 13px;
+     color: rgb(75, 75, 75);
+     font-weight: 70;
+     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+     font-stretch: ultra-condensed;
+ }
+ 
+ #menuMainOptions>ul>li>a:hover {
+     color: black;
+     text-decoration: underline;
+ }
+ 
+ #menuExtraOptions>ul {
+     padding-left: 10px;
+     padding-right: 10px;
+     font-weight: 70;
+ }
+ 
+ #menuExtraOptions>ul>li {
+     padding-top: 40px;
+ }
+ 
+ ::-webkit-scrollbar {
+     width: 1px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+     background: #a5a5a5;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+     background: black;
+ }
+ /*------------- Modal ---------------*/
