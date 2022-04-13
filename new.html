@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+        #container {
+            /* display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(20, auto); */
+            
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: auto;
+            margin: 20px solid red; 
+        }
+
+        #box1 {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        var womansData = [
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/5039/639/500/2/w/1238/5039639500_9_1_1.jpg?ts=1649243476367",
+                name: "LOOSE-FITTING SHIRT",
+                price: "₹ 1,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/5039/642/800/2/w/410/5039642800_15_2_1.jpg?ts=1649283772541",
+                name: "ASYMMETRIC DRESS WITH GATHERING",
+                price: "₹ 1,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/0085/352/620/2/w/185/0085352620_1_1_1.jpg?ts=1649243078912",
+                name: "GATHERED TULLE DRESS",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/M/1/p/0000/002/459/2/w/148/0000002459_1_1_1.jpg?ts=1649243657049",
+                name: "GATHERED TULLE DRESS",
+                price: "₹ 2,590.00",
+            },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 1,990.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///2022/V/0/1/p/6050/413/500/2/w/148/6050413500_1_1_1.jpg?ts=1649253963987",
+            //     name: "RUCHED MINI SKIRT",
+            //     price: "₹ 1,790.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///2022/V/0/1/p/0219/860/630/2/w/307/0219860630_15_10_1.jpg?ts=1649174887417",
+            //     name: "SATIN CORSETRY-INSPIRED TOP",
+            //     price: "₹ 1,890.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "SATIN BODYSUIT",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // },
+            // {
+            //     image_url: "https://static.zara.net/photos///contents/cm/media-transformations/joinlife-ctx/joinlife-large.svg?ts=1611919362013",
+            //     name: "FLARED TROUSERS",
+            //     price: "₹ 2,590.00",
+            // }
+        ]
+
+        womansData.forEach(function (womanData) {
+            var container = document.createElement('div');
+
+            var img = document.createElement('img');
+            img.src = womanData.image_url;
+
+            var box1 = document.createElement('div');
+            box1.setAttribute('id', 'box1');
+
+            var name = document.createElement('p');
+            name.textContent = womanData.name;
+            name.setAttribute('id', 'name-para')
+
+            var price = document.createElement('p');
+            price.innerText = womanData.price;
+            price.setAttribute('id', 'name-para')
+
+
+            box1.append(name, price);
+            container.append(img, box1);
+            document.querySelector('#container').append(container);
+        });
+
+    </script>
+</body>
+
+</html>
