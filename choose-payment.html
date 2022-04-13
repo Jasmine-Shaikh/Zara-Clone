@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Order - Payment</title>
+    <style>
+        /* #main-container{
+
+        } */
+
+        #pay-option{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            
+
+        }
+        .pay-option-item{
+            border: 1px solid gray;
+            width: 135px;
+            height: 135px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="main-container">
+        <div id="head">CHOOSE A PAYMENT METHOD</div>
+        <div id="warning">Please note that only cards that use 3D Secure are accpted.
+            Contact your bank to activate it or for further instructions.
+        </div>
+        <div id="pay-option">
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg" alt="">
+                <p>VISA</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/icon-payment-mastercard.svg" alt="">
+                <p>MASTERCARD</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/icon-payment-amex_2.svg" alt="">
+                <p>AMERICAN EXPRESS</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/ru-pay.svg" alt="">
+                <p>RUPAY</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/net-banking.svg" alt="">
+                <p>NETBANKING</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/upi.svg" alt="">
+                <p>UNIFIED PAYMENTS INTERFACE</p>
+            </div>
+        </div>
+
+        <div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/co-djpen.svg" alt="">
+                <p>CASH ON DELIVERY</p>
+            </div>
+        </div>
+        <div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/in.svg" alt="">
+                <p>IN CARD</p>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
