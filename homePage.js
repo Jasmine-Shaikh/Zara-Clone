@@ -74,7 +74,6 @@ function slider(sliderElement) {
             indicator.classList.add('slider__indicator');
             indicator.setAttribute('data-slider-target-index', index);
             indicatorContainer.appendChild(indicator);
-
             section.classList.add('slider__page');
             pages.push(section);
             section.setAttribute('data-slider-index', index++);
@@ -82,6 +81,7 @@ function slider(sliderElement) {
 
         document.body.appendChild(indicatorContainer);
         document.querySelector('a[data-slider-target-index = "' + currentSlide + '"]').classList.add('slider__indicator--active');
+        document.querySelector('p[data-slider-target-index = "' + currentSlide + '"]').classList.add('slider__indicator--active');
 
 
         // stuff for touch devices
@@ -157,6 +157,8 @@ function slider(sliderElement) {
         // change dots
         document.querySelector('a.slider__indicator--active').classList.remove('slider__indicator--active');
         document.querySelector('a[data-slider-target-index="' + currentSlide + '"]').classList.add('slider__indicator--active');
+        document.querySelector('p.slider__indicator--active').classList.remove('slider__indicator--active');
+        document.querySelector('p[data-slider-target-index="' + currentSlide + '"]').classList.add('slider__indicator--active');
     };
 
     // go to spesific slide if it exists
