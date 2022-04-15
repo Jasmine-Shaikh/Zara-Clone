@@ -15,7 +15,6 @@ menuModal.addEventListener('animationend', function() {
 });
 
 
-
 // ---------------------Landing Page Carousel---------------------------
 
 var mySlider = slider('.slides');
