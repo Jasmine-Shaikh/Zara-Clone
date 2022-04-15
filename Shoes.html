@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css"> -->
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        #container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(10, auto);
+            gap: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+        #box1 {
+            display: flex;
+            justify-content: space-between;
+            /* width: 100%; */
+        }
+        p{
+            margin-top: 6px;
+            font-size: small;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+        @media all and (min-width: 450px) and (max-width: 850px){
+            #container {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(8, auto);
+        }
+         }
+        @media all and (min-width: 50px) and (max-width: 450px){
+            #container {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(11, auto);
+        }
+         }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+    </div>
+    <script>
+        var womansData = [
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/3625/910/040/2/w/563/3625910040_1_1_1.jpg?ts=1649414620546",
+                name: "TIED LEATHER FLAT SANDALS",
+                price: "₹ 2,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/3606/910/030/2/w/563/3606910030_6_1_1.jpg?ts=1646323428285",
+                name: "FLAT STRAPPY SANDALS",
+                price: "₹ 2,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/2631/910/040/2/w/563/2631910040_2_1_1.jpg?ts=1649414612449",
+                name: "BUCKLED LEATHER FLAT SANDALS",
+                price: "₹ 5,990.00",
+            },
+        
+        
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/1355/810/040/12/w/563/1355810040_1_1_1.jpg?ts=1649764298463",
+                name: "LEATHER BLOCK HEEL SANDALS",
+                price: "₹ 4,990.00",
+            },{   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/1215/910/078/2/w/563/1215910078_1_1_1.jpg?ts=1649411244397",
+                name: "BRAIDED HIGH HEEL MULES",
+                price: "₹ 4,990.00",
+            },
+            
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/1802/910/098/2/w/563/1802910098_1_1_1.jpg?ts=1649411244839",
+                name: "FLAT PLAITED MULES",
+                price: "₹ 4,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/1507/910/009/2/w/563/1507910009_1_1_1.jpg?ts=1649411243557",
+                name: "WOVEN SLINGBACK BALLET FLATS",
+                price: "₹ 4,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/2532/910/040/12/w/563/2532910040_1_1_1.jpg?ts=1649420578050",
+                name: "EMBELLISHED FLAT SLINGBACK SHOES",
+                price: "₹ 5,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/2348/910/098/2/w/563/2348910098_1_1_1.jpg?ts=1649082496147",
+                name: "EMBELLISHED PLATFORM SANDALS",
+                price: "₹ 5,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/5347/910/001/2/w/563/5347910001_6_1_1.jpg?ts=1648812666145",
+                name: "LEATHER TRAINERS",
+                price: "₹ 4,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/5301/810/001/2/w/563/5301810001_6_1_1.jpg?ts=1649781426547",
+                name: "TRAINERS",
+                price: "₹ 2,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/5300/810/202/2/w/563/5300810202_6_1_1.jpg?ts=1649781549157",
+                name: "TRAINERS",
+                price: "₹ 2,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/2804/910/040/2/w/563/2804910040_6_1_1.jpg?ts=1643044582794",
+                name: "FLAT SANDALS",
+                price: "₹ 4,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/3607/710/087/2/w/563/3607710087_1_1_1.jpg?ts=1646240935877",
+                name: "FLAT SANDALS WITH METAL CHAIN DETAIL",
+                price: "₹ 2,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/2230/910/060/2/w/563/2230910060_1_1_1.jpg?ts=1646745690240",
+                name: "HEELED SLINGBACK SHOES WITH EMBELLISHED BOW",
+                price: "₹ 5,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/2228/910/009/2/w/563/2228910009_1_1_1.jpg?ts=1646745690007",
+                name: "HEELED SLINGBACK SHOES WITH EMBELLISHED BOW",
+                price: "₹ 5,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/2228/910/060/3/w/563/2228910060_1_1_1.jpg?ts=1647001732675",
+                name: "HEELED SLINGBACK SHOES WITH EMBELLISHED BOW",
+                price: "₹ 5,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/5108/910/202/2/w/563/5108910202_1_1_1.jpg?ts=1646309081470",
+                name: "SOFT TRAINERS",
+                price: "₹ 3,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/5112/910/001/2/w/563/5112910001_6_1_1.jpg?ts=1646219870046",
+                name: "CHUNKY SOLE TRAINERS",
+                price: "₹ 4,590.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/3329/910/030/2/w/563/3329910030_6_1_1.jpg?ts=1643099135389",
+                name: "VINYL SANDALS WITH METHACRYLATE HEELS",
+                price: "₹ 2,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/1/1/p/3329/910/098/2/w/563/3329910098_6_1_1.jpg?ts=1643044372807",
+                name: "VINYL SANDALS WITH METHACRYLATE HEELS",
+                price: "₹ 2,990.00",
+            },
+            {   
+                image_url: "https://static.zara.net/photos///2021/I/1/1/p/1327/810/050/2/w/563/1327810050_1_1_1.jpg?ts=1621425042166",
+                name: "LEATHER HEELED SANDALS WITH JUTE INSOLE",
+                price: "₹ 4,990.00",
+            },
+        
+        ]
+        womansData.forEach(function (womanData) {
+            var container = document.createElement('div');
+
+            var img = document.createElement('img');
+            img.src = womanData.image_url;                           
+
+            var box1 = document.createElement('div');
+            box1.setAttribute('id', 'box1');
+
+            var name = document.createElement('p');
+            name.textContent = womanData.name;
+            
+
+            var price = document.createElement('p');
+            price.innerText = womanData.price;
+           
+
+
+            box1.append(name, price);
+            container.append(img, box1);
+            document.querySelector('#container').append(container);
+        });
+
+    </script>
+</body>
+
+</html>
