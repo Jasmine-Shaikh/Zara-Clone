@@ -170,12 +170,12 @@ function slider(sliderElement) {
     };
 
     // if page is loaded with hash, go to slide
-    if (location.hash) {
-        setTimeout(function() {
-            window.scrollTo(0, 0);
-            gotoSlide(location.hash);
-        }, 1);
-    };
+    // if (location.hash) {
+    //     setTimeout(function() {
+    //         window.scrollTo(0, 0);
+    //         gotoSlide(location.hash);
+    //     }, 1);
+    // };
 
     // we have lift off
     if (document.readyState === 'complete') {

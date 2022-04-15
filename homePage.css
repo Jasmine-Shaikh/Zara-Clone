@@ -310,7 +310,7 @@ section>img {
 
 #manufacturerDetails {
     position: absolute;
-    left: 80px;
+    left: 5%;
     top: 82%;
     z-index: 2;
     margin: 0;
@@ -324,17 +324,15 @@ section>img {
     font-stretch: condensed;
 }
 
-#navIndicator {
-    position: fixed;
-    top: 50%;
-    left: 31.5%;
-    margin-top: 250px;
-}
-
 #navbar {
     display: flex;
+    float: right;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
     text-align: center;
-    margin: 0;
+    margin: auto;
+    margin-top: 500px;
     padding: 0;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -369,12 +367,11 @@ section>img {
     margin: 0px;
 }
 
-
-/* @media only screen and (max-width: 1177px) {
+@media only screen and (max-width: 550px) {
     #navbar {
-        right: 20%;
+        display: none;
     }
-} */
+}
 
 
 /*/ ---------------------Landing Page Carousel End--------------------------*/
