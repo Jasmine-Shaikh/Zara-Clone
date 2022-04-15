@@ -6,18 +6,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process Order - Payment using Card</title>
     <style>
-        /* #pay-main-container{
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
+        #pay-main-container{
+            width: 85%;
+            margin: auto;
             
-        } */
+        }
 
         #card-container{
             display: grid;
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: auto;
             gap: 20px;
+            width: 700px;
         }
+        .remove-border{
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            margin-top: 25px;
+            
+        }
+        #pay-icon{
+            border: 1px solid gray;
+            width: 82px;
+            height: 54px;
+            margin-top: 80px;
+            margin-bottom: 80px;
+
+        }
+
+                /* //FIX button css code  */
+                #continue{
+            display: flex;
+            position: fixed;
+            bottom: 25px;
+            right: 15px; 
+            
+            
+        }
+        #total-pirce-div{
+            display: flex;
+            flex-direction: column;
+            height: 40px;     
+            justify-content: center;
+            margin-right: 60px;
+        }
+        #continue-button{
+            background-color: black;
+            color: white;
+            padding-left: 90px;
+            padding-right: 90px;
+            height: 40px;
+            
+        }
+
+            /* //FIX button css code  */
     </style>
 </head>
 <body>
@@ -29,8 +73,8 @@
         <img id="pay-icon" src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg" alt="">
        
         <div id="card-container">
-            <input type="number" placeholder="CARD NUMBER">
-            <select name="Month" id="month">
+            <input id="card-number" class="remove-border" type="number" placeholder="CARD NUMBER">
+            <select class="remove-border" name="Month" id="month">
                 <option value="" selected disabled>Month</option>
                 <option value="01">01</option>
                 <option value="02">02</option>
@@ -45,7 +89,7 @@
                 <option value="11">11</option>
                 <option value="12">12</option>
             </select>
-            <select name="Year" id="year">
+            <select class="remove-border" name="Year" id="year">
                 <option value="" selected disabled> Year</option>
                 <option value="2022">2022</option>
                 <option value="2023">2023</option>
@@ -57,11 +101,72 @@
                 <option value="2029">2029</option>
                 <option value="2030">2030</option>
             </select>
-            <input id="card-holder" type="text" placeholder="CARD HOLDER">
-            <input id="cvv" type="number" placeholder="CVV2 SECURITY CODE">
+            <input class="remove-border" id="card-holder" type="text" placeholder="CARD HOLDER">
+            <input class="remove-border" id="cvv" type="number" placeholder="CVV2 SECURITY CODE">
         </div>
+
+         <!-- design fix continue button  -->
+         <div id="continue">
+            <div id="total-pirce-div">
+                <p id="total-price">Total Price</p>
+                
+
+            </div>
+            
+            <a href="./pay-card-detail.html">
+                <button id="continue-button">
+                    CONTINUE
+                </button>
+            </a>
+        </div>
+
+        
 
     </div>
     
 </body>
+
+<script>
+    
+    //    show total price code 
+    var totalPrice;
+    if(JSON.parse(localStorage.getItem('cartData'))===null){
+        totalPrice=0;
+    }else{
+        totalPrice=JSON.parse(localStorage.getItem('cartData')).price;
+    }
+    
+   document.getElementById('total-price').innerText=`Total RS.  ${totalPrice}`;
+
+    // after click continue show order sucess full code below
+    document.querySelector('#continue-button').addEventListener('click',function(){
+        event.preventDefault();
+        // evt.preventDefault();
+        var cardNumber=document.querySelector('#card-number').value;
+        var month=document.querySelector('#month').value;
+        var year=document.querySelector('#year').value;
+        var holderName=document.querySelector('#card-holder').value;
+        var cvv=document.querySelector('#cvv').value;
+        console.log(cardNumber,month,year,holderName,cvv);
+        if(cardNumber && month && year && holderName && cvv && cardNumber.length==16 && cvv.length==3){
+            alert("Your Order Placed Sucessfully");
+            location.assign("./cart-page.html");
+
+        }else{
+            alert("Enter Correct Payment Details");
+            // location.reload();
+
+        }      
+        
+        
+
+
+
+
+        // location.reload(); // reload same page
+
+    });
+
+
+</script>
 </html>

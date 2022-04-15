@@ -73,6 +73,34 @@
         .box>div:first-child{
             color: black;
         }
+
+        /* //FIX button css code  */
+        #continue{
+            display: flex;
+            position: fixed;
+            bottom: 25px;
+            right: 15px;    
+           
+            
+            
+        }
+        #total-pirce-div{
+            display: flex;
+            flex-direction: column;
+            height: 40px;     
+            justify-content: center;
+            margin-right: 60px;
+        }
+        #continue-button{
+            background-color: black;
+            color: white;
+            padding-left: 90px;
+            padding-right: 90px;
+            height: 40px;
+            
+        }
+
+            /* //FIX button css code  */
     </style>
 </head>
 <body>
@@ -156,6 +184,21 @@
             <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
         </div>
 
+         <!-- design fix continue button  -->
+         <div id="continue">
+            <div id="total-pirce-div">
+                <p id="total-price">Total Price</p>
+                
+
+            </div>
+            
+            <a href="./choose-payment.html">
+                <button id="continue-button">
+                    CONTINUE
+                </button>
+            </a>
+        </div>
+
 
 
         <!-- container stop  -->
@@ -203,6 +246,15 @@
 
     }
  
+//    show total price code 
+var totalPrice;
+    if(JSON.parse(localStorage.getItem('cartData'))===null){
+        totalPrice=0;
+    }else{
+        totalPrice=JSON.parse(localStorage.getItem('cartData')).price;
+    }
+    
+   document.getElementById('total-price').innerText=`Total RS.  ${totalPrice}`;
 
 
 

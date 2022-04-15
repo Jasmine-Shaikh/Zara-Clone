@@ -88,16 +88,33 @@
 
 
         /* // continue css  */
+
+        /* //FIX button css code  */
         #continue{
             display: flex;
-            flex-direction: row;
-            justify-content: right;
+            position: fixed;
+            bottom: 25px;
+            right: 15px; 
             
             
         }
-        /* #continue-button{
+        #total-pirce-div{
+            display: flex;
+            flex-direction: column;
+            height: 40px;     
+            justify-content: center;
+            margin-right: 60px;
+        }
+        #continue-button{
+            background-color: black;
+            color: white;
+            padding-left: 90px;
+            padding-right: 90px;
+            height: 40px;
             
-        } */
+        }
+
+            /* //FIX button css code  */
 
     </style>
 </head>
@@ -216,13 +233,35 @@
 
         <!-- design fix continue button  -->
         <div id="continue">
-            <p>Total Price</p>
-            <button id="continue-button">
-                CONTINUE
-            </button>
+            <div id="total-pirce-div">
+                <p id="total-price">Total Price</p>
+                
+
+            </div>
+            
+            <a href="./pay-card-detail.html">
+                <button id="continue-button">
+                    CONTINUE
+                </button>
+            </a>
         </div>
 
     </div>
     
 </body>
+
+<script>
+//    show total price code 
+    var totalPrice;
+    if(JSON.parse(localStorage.getItem('cartData'))===null){
+        totalPrice=0;
+    }else{
+        totalPrice=JSON.parse(localStorage.getItem('cartData')).price;
+    }
+    
+   document.getElementById('total-price').innerText=`Total RS.  ${totalPrice}`;
+
+    
+    
+</script>
 </html>
