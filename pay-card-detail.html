@@ -5,10 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process Order - Payment using Card</title>
+    <link rel="icon" type="image/x-icon" href="./fav icon/favicon.ico">
     <style>
+        *{
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+           font-stretch: ultra-condensed;
+        }
         #pay-main-container{
             width: 85%;
             margin: auto;
+            
+        }
+        #heading{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10%;
             
         }
 
@@ -62,13 +74,123 @@
         }
 
             /* //FIX button css code  */
+
+            #headerContents {
+     display: flex;
+     justify-content: space-between;
+     width: 92%;
+     margin: auto;
+     margin-right: 10px;
+     margin-top: 15px;
+    
+    top: 0px;
+    
+   }
+ 
+
+
+ 
+ #headerRight {
+     width: max-content;
+     display: flex;
+     
+     padding: 10px;
+     justify-content: space-between;  
+      
+ }
+ 
+ 
+ 
+ #headerRightRight {
+     display: flex;
+     
+    
+ }
+ #help{
+    position: fixed;
+    right: 7.5%;
+ }
+ 
+ #headerRightRight>a {
+     text-decoration: none;
+     padding: 0px 10px 0px 10px;
+     font-size: 13px;
+     color: rgb(41, 41, 41);
+     font-weight: 100;
+     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+     font-stretch: ultra-condensed;
+    
+     
+ }
+ 
+
+ #logo {
+     width: 212px;
+     position: fixed;
+ }
+ /*-------------------- Header End------------------------- */
+
+    /* footer css part  */
+    #container-bottom{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            font-size: 10px;
+            line-height: 25px;
+            height: 600px;
+            color: gray;
+
+        }
+        #container-bottom1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 150px;
+            color: gray;
+        }
+        #container-bottom2{
+            font-size: 10px;
+            height: 250px;
+            color: gray;
+        }
+
+        .bottom-heading{
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 45px;
+        }
+        #footer-html{
+            margin-top: 90%;
+        }
+
     </style>
 </head>
 <body>
+    <!-- add heading part inside  -->
+    
+                    <!-- header section html  -->
+                    
+                    <header>
+                        <div id="headerContents">
+                            <div id="headerLeft">
+                              
+                                <div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+                                </div>
+                
+                            </div>
+                           
+                                <div id="headerRightRight">
+                                    
+                                    <a id="help" href="">HELP</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                <!-- end header section html  -->
     <div id="pay-main-container">
-        <div>
-            <!-- add heading section code  -->
-        </div>
+        
         <h2 id="heading">ENTER YOUR CARD DETAILS</h2>
         <img id="pay-icon" src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg" alt="">
        
@@ -119,6 +241,75 @@
                 </button>
             </a>
         </div>
+
+
+                <!-- Design Bottom view  -->
+
+               <div id="footer-html">
+                   <!-- all footer html  -->
+                   <div id="container-bottom">
+                    <!-- START  -->
+                    <div class="box">
+                            <div class="bottom-heading">HELP</div>
+                            <div>SHOP AT ZARA.COM</div>
+                            <div>PRODUCT</div>
+                            <div>PAYMENT</div>
+                            <div>SHIPPING</div>
+                            <div>EXCHANGES AND RETURNS</div>
+                            <div>SHOPS AND COMPANY</div>
+                            <div>CLOTHES COLLECTION</div>
+                            <div>PROGRAMME</div>
+                            <div>MY ACCOUNT</div>
+                    </div>
+        
+                    <div class="box">
+                        <div class="bottom-heading">FOLLOW US</div>
+                        <div>NEWSLETTER</div>
+                        <div>INSTAGRAM</div>
+                        <div>FACEBOOK</div>
+                        <div>TWITTER</div>
+                        <div>PINTEREST</div>
+                        <div>YOUTUBE</div>               
+                    </div>
+        
+                    <div class="box">
+                        <div class="bottom-heading">COMPANY</div>
+                        <div>ABOUT US</div>
+                        <div>JOIN LIFE</div>
+                        <div>OFFICES</div>
+                        <div>STORES</div>
+                        <div>WORK WITH US</div>                              
+                    </div>
+        
+                    <div class="box">
+                        <div class="bottom-heading">POLICIES</div>
+                        <div>PRIVACY POLICY</div>
+                        <div>PURCHASE CONDITIONS</div>
+                        <div>COOKIES SETTINGS</div>                                             
+                    </div>
+        
+        
+                <!-- STOP  -->
+                </div>
+        
+                <div id="container-bottom1">
+                    <!-- start   -->
+                    <div>INDIA</div>
+                    <div>ENGLISH
+                        © ALL RIGHTS RESERVED</div>
+        
+        
+                    <!-- stop  -->
+                </div>
+        
+                <div id="container-bottom2">
+                    <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+                    <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+                    <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+                </div>
+        
+
+               </div>
 
         
 

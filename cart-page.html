@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart - Zara India</title>
+    <link rel="icon" type="image/x-icon" href="./fav icon/favicon.ico">
 
     <style>
+        *{
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
         #main-container{
             width: 85%;
             margin: auto;
+            /* padding-top: 10%; */
         }
 
         #cartNavBar{
             display: flex;
             flex-direction: row; 
             gap: 10px;
-            margin-top: 150px;
+            margin-top: 10%;
         }
         #cart-nav{
             color: black;
@@ -44,7 +50,7 @@
             gap: 30px;
             font-size: 10px;
             line-height: 25px;
-            height: 600px;
+            height: 300px;
             color: gray;
 
         }
@@ -79,8 +85,7 @@
             display: flex;
             position: fixed;
             bottom: 25px;
-            right: 15px;    
-           
+            right: 15px; 
             
             
         }
@@ -101,12 +106,120 @@
         }
 
             /* //FIX button css code  */
+
+            /*-------------------- Header ------------------------- */
+ 
+            #headerContents {
+     display: flex;
+     justify-content: space-between;
+     width: 92%;
+     margin: auto;
+     margin-right: 10px;
+    margin-top: 15px;
+    
+    top: 0px;
+    
+ }
+ 
+
+
+ 
+ #headerRight {
+     width: max-content;
+     display: flex;
+     
+     padding: 10px;
+     justify-content: space-between;  
+      
+ }
+ 
+
+ 
+ #headerRightRight {
+     display: flex;
+     
+    
+ }
+ #help{
+    position: fixed;
+    right: 7.5%;
+ }
+ 
+ #headerRightRight>a {
+     text-decoration: none;
+     padding: 0px 10px 0px 10px;
+     font-size: 13px;
+     color: rgb(41, 41, 41);
+     font-weight: 100;
+     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+     font-stretch: ultra-condensed;
+    
+     
+ }
+ 
+
+ #logo {
+     width: 212px;
+     position: fixed;
+ }
+ /*-------------------- Header End------------------------- */
+
+
+ /* // css for show cart product  */
+        #product-container{
+            display: flex;
+            gap: 20px;
+            color: rgb(47, 46, 46);
+        }
+        #inc-dec-btn{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        #right-side{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .btn{
+            background-color: transparent;
+            border: 0px;
+            padding: 20px;
+            font-size: 25px;
+        }
+
     </style>
 </head>
 <body>
+    <!-- add heading part inside  -->
+    
+                    <!-- header section html  -->
+                    
+                     <header>
+                        <div id="headerContents">
+                            <div id="headerLeft">
+                              
+                                <div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+                                </div>
+                
+                            </div>
+                           
+                                <div id="headerRightRight">
+                                    
+                                    <a id="help" href="">HELP</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                <!-- end header section html  -->
+
+
+    
     <div id="main-container">
         <div>
-             <!-- add heading part inside  -->
+             
         </div>
         <div id="cartNavBar">
             <div id="cart-nav">CART</div>
@@ -116,6 +229,35 @@
 
         <div id="product-details">
             <!-- show dynamicaly product details added in cart  -->
+            <!-- // dummy code  -->
+             <!-- // design cart product shopw  -->
+    <p>BLOUSE WITH CONTRAST EMBROIDERY</p>
+    <div id="product-container">
+        
+        <div>
+            <img src="https://static.zara.net/photos///2022/V/0/1/p/7521/031/940/2/w/353/7521031940_1_1_1.jpg?ts=1647433483020" alt="">
+        </div>
+        <div  id="right-side">
+            <div>
+                <p>REF. | 7521/031</p>
+            <P>DARK FUCHSIA</P>
+            <P>S</P>
+            <div id="inc-dec-btn">
+                <button class="btn">-</button>
+                <p>1</p>
+                <button class="btn">+</button>
+            </div>
+            </div>
+            <div>
+                <p>Price Rs. </p>
+            </div>
+            <div>
+                <p>DELETE</p>
+                <P>SAVE FOR LATER</P>
+            </div>
+        </div>
+    </div>
+
 
         </div>
 
@@ -207,44 +349,44 @@
 </body>
 
 <script>
-    var carData=JSON.parse(localStorage.getItem('cartData'));
-    if(carData!=null){
-            var totalsum=cartData.reduce(function(sum,ele,index,arr){
-            return sum+Number(ele.price);
-            },0);
-            var totalItem=carData.length;
+    // var carData=JSON.parse(localStorage.getItem('cartData'));
+    // if(carData!=null){
+    //         var totalsum=cartData.reduce(function(sum,ele,index,arr){
+    //         return sum+Number(ele.price);
+    //         },0);
+    //         var totalItem=carData.length;
             
-            carData.forEach((cartItem,cartIndex) => {
-            var box=document.createElement('div');
-            box.setAttribute('class','box');
+    //         carData.forEach((cartItem,cartIndex) => {
+    //         var box=document.createElement('div');
+    //         box.setAttribute('class','box');
 
-            var img=document.createElement('img');
-            img.src=cartItem.image_url;
+    //         var img=document.createElement('img');
+    //         img.src=cartItem.image_url;
 
-            var title=document.createElement('p');
-            title.innerText=cartItem.title;
+    //         var title=document.createElement('p');
+    //         title.innerText=cartItem.title;
 
-            var deleteButton=document.createElement('button');
-            deleteButton.innerText="Delete";
-            deleteButton.addEventListener('click', function(){
-                cartData.splice(cartIndex,1);
-                localStorage.setItem('cartData',JSON.stringify(cartData));
-                window.location.reload();
-            });
-            box.append(img,title,deleteButton);
-            document.querySelector('#product-details').append(box);
+    //         var deleteButton=document.createElement('button');
+    //         deleteButton.innerText="Delete";
+    //         deleteButton.addEventListener('click', function(){
+    //             cartData.splice(cartIndex,1);
+    //             localStorage.setItem('cartData',JSON.stringify(cartData));
+    //             window.location.reload();
+    //         });
+    //         box.append(img,title,deleteButton);
+    //         document.querySelector('#product-details').append(box);
             
-        });
+    //     });
         
 
 
-    }else {
-        let empty=document.createElement('p');
-        empty.innerText="YOUR BASKET IS EMPTY";
-        empty.setAttribute('id','empty');
-        document.querySelector('#product-details').append(empty);
+    // }else {
+    //     let empty=document.createElement('p');
+    //     empty.innerText="YOUR BASKET IS EMPTY";
+    //     empty.setAttribute('id','empty');
+    //     document.querySelector('#product-details').append(empty);
 
-    }
+    // }
  
 //    show total price code 
 var totalPrice;
