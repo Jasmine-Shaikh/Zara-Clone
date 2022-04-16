@@ -8,6 +8,11 @@
     <link rel="icon" type="image/x-icon" href="./fav icon/favicon.ico">
 
     <style>
+
+
+
+
+
         *{
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
@@ -181,12 +186,69 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        .btn{
+        #inc-btn,#dec-btn{
             background-color: transparent;
             border: 0px;
             padding: 20px;
             font-size: 25px;
         }
+
+
+        /* Use media query  */
+
+        @media all and (min-width: 451px) and (max-width: 1050px) {
+            #cartNavBar{
+            display: flex;
+            flex-direction: row; 
+            gap: 10px;
+            margin-top: 20%;
+        }
+
+     
+            
+      
+      }
+      
+      @media all and (min-width: 88px) and (max-width: 450px) {
+            #cartNavBar{
+            display: flex;
+            flex-direction: row; 
+            gap: 10px;
+            margin-top: 35%;
+        }
+
+
+        #continue{
+            display: flex;
+            position: fixed;
+            bottom: 15px;
+            right: 10px; 
+            
+            
+        }
+        #total-pirce-div{
+            display: flex;
+            flex-direction: column;
+            height: 40px;     
+            justify-content: center;
+            margin-right: 40px;
+        }
+        #continue-button{
+            background-color: black;
+            color: white;
+            padding-left: 70px;
+            padding-right: 70px;
+            height: 40px;
+            
+        }
+            
+      
+      }
+
+
+
+      
+
 
     </style>
 </head>
@@ -243,13 +305,13 @@
             <P>DARK FUCHSIA</P>
             <P>S</P>
             <div id="inc-dec-btn">
-                <button class="btn">-</button>
-                <p>1</p>
-                <button class="btn">+</button>
+                <button id="dec-btn">-</button>
+                <p id="count">1</p>
+                <button id="inc-btn">+</button>
             </div>
             </div>
             <div>
-                <p>Price Rs. </p>
+                <p class="total-price">Rs. 500 /-</p>
             </div>
             <div>
                 <p>DELETE</p>
@@ -329,7 +391,7 @@
          <!-- design fix continue button  -->
          <div id="continue">
             <div id="total-pirce-div">
-                <p id="total-price">Total Price</p>
+                <p class="total-price1">Total Price : Rs. 500/-</p>
                 
 
             </div>
@@ -349,57 +411,41 @@
 </body>
 
 <script>
-    // var carData=JSON.parse(localStorage.getItem('cartData'));
-    // if(carData!=null){
-    //         var totalsum=cartData.reduce(function(sum,ele,index,arr){
-    //         return sum+Number(ele.price);
-    //         },0);
-    //         var totalItem=carData.length;
-            
-    //         carData.forEach((cartItem,cartIndex) => {
-    //         var box=document.createElement('div');
-    //         box.setAttribute('class','box');
-
-    //         var img=document.createElement('img');
-    //         img.src=cartItem.image_url;
-
-    //         var title=document.createElement('p');
-    //         title.innerText=cartItem.title;
-
-    //         var deleteButton=document.createElement('button');
-    //         deleteButton.innerText="Delete";
-    //         deleteButton.addEventListener('click', function(){
-    //             cartData.splice(cartIndex,1);
-    //             localStorage.setItem('cartData',JSON.stringify(cartData));
-    //             window.location.reload();
-    //         });
-    //         box.append(img,title,deleteButton);
-    //         document.querySelector('#product-details').append(box);
-            
-    //     });
-        
+    var iprice=5000;
+    var count=1;
+    localStorage.setItem('totalPrice',iprice);
+    localStorage.setItem('count',count);
+   
+    document.querySelector('.total-price1').innerText=`Total Price : Rs. ${iprice}/- `;
+    document.querySelector('.total-price').innerText=`Rs. ${iprice}/- `;
+    document.querySelector('#count').innerText=`${count} `;
 
 
-    // }else {
-    //     let empty=document.createElement('p');
-    //     empty.innerText="YOUR BASKET IS EMPTY";
-    //     empty.setAttribute('id','empty');
-    //     document.querySelector('#product-details').append(empty);
-
-    // }
- 
-//    show total price code 
-var totalPrice;
-    if(JSON.parse(localStorage.getItem('cartData'))===null){
-        totalPrice=0;
-    }else{
-        totalPrice=JSON.parse(localStorage.getItem('cartData')).price;
-    }
-    
-   document.getElementById('total-price').innerText=`Total RS.  ${totalPrice}`;
+    document.querySelector('#inc-btn').addEventListener('click',function(){
+        count++;
+        localStorage.setItem('count',count);
+        document.querySelector('#count').innerText=`${count} `
+        var finalPrice=iprice*count;
+        localStorage.setItem('totalPrice',finalPrice);
+        document.querySelector('.total-price1').innerText=`Total Price : Rs. ${finalPrice}/- `;        
+        document.querySelector('.total-price').innerText=`Rs. ${finalPrice}/- `;       
 
 
+    });
 
+    document.querySelector('#dec-btn').addEventListener('click',function(){
+        if(count>1){
+            count--;  
+            localStorage.setItem('count',count);
+        }        
+        document.querySelector('#count').innerText=`${count} `
+        var finalPrice=iprice*count;
+        localStorage.setItem('totalPrice',finalPrice);
+        document.querySelector('.total-price1').innerText=`Total Price : Rs. ${finalPrice}/- `;
+        document.querySelector('.total-price').innerText=`Rs. ${finalPrice}/- `;       
+
+
+    });
 
     
     

@@ -178,6 +178,54 @@
  }
  /*-------------------- Header End------------------------- */
 
+ /* start media query  */
+
+
+ @media all and (min-width: 451px) and (max-width: 1050px) {
+    #head{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 25%;
+            margin-bottom: 50px;
+        }
+
+
+ 
+        #warning{
+            color: rgb(255, 140, 0);
+            font-size: 16px;
+            border: 1px solid rgb(255, 140, 0);
+            width: 400px;
+            padding: 20px;
+        }
+
+        #pay-option{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 100px;
+            gap: 15px;
+           
+            
+
+        }
+            
+      
+      }
+      
+      @media all and (min-width: 88px) and (max-width: 450px) {
+        #head{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 30%;
+            margin-bottom: 50px;
+        }
+            
+      
+      }
+
+
             
 
     </style>
@@ -347,5 +395,9 @@
 
     
     
+</script>
+<script>
+    var totalPrice=localStorage.getItem('totalPrice');
+    document.querySelector('#total-price').innerText=`Total Rs. ${totalPrice}/-`
 </script>
 </html>

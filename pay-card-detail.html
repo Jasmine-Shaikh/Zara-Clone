@@ -29,7 +29,7 @@
             grid-template-columns: repeat(3,1fr);
             grid-template-rows: auto;
             gap: 20px;
-            width: 700px;
+            width: 70%;
         }
         .remove-border{
             border-top-style: hidden;
@@ -162,6 +162,19 @@
         #footer-html{
             margin-top: 90%;
         }
+
+
+        @media all and (min-width: 451px) and (max-width: 1050px) {
+            #heading{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 25%;
+            
+        }
+
+    }
+
 
     </style>
 </head>
@@ -341,22 +354,20 @@
         console.log(cardNumber,month,year,holderName,cvv);
         if(cardNumber && month && year && holderName && cvv && cardNumber.length==16 && cvv.length==3){
             alert("Your Order Placed Sucessfully");
-            location.assign("./cart-page.html");
+            location.assign("./cart-page.html");  // add home page address
 
         }else{
             alert("Enter Correct Payment Details");
             // location.reload();
 
-        }      
-        
-        
-
-
-
-
+        } 
         // location.reload(); // reload same page
 
     });
+
+    
+    var totalPrice=localStorage.getItem('totalPrice');
+    document.querySelector('#total-price').innerText=`Total Rs. ${totalPrice}/-`
 
 
 </script>
