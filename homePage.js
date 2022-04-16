@@ -14,6 +14,14 @@ menuModal.addEventListener('animationend', function() {
 
 });
 
+var cartTotal = document.getElementById('cartOption').innerHTML;
+var cartDetails = JSON.parse(localStorage.getItem('cartData'));
+
+if (cartDetails !== null) {
+    cartTotal = cartDetails.length;
+} else {
+    cartTotal = 0;
+}
 
 // ---------------------Landing Page Carousel---------------------------
 
