@@ -1,0 +1,306 @@
+#headerContents {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#headerLeft {
+  display: flex;
+}
+
+#headerRight {
+  width: 30%;
+  display: flex;
+  margin-right: 30px;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+#headerRightLeft>a {
+  padding: 0% 60% 0% 0%;
+  font-size: 13px;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  color: rgb(41, 41, 41);
+  font-weight: 700;
+  font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+  font-stretch: ultra-condensed;
+}
+
+#headerRightRight {
+  display: flex;
+  width: fit-content;
+}
+
+#headerRightRight>a {
+  text-decoration: none;
+  padding: 0px 10px 0px 10px;
+  font-size: 13px;
+  color: rgb(41, 41, 41);
+  font-weight: 100;
+  font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+  font-stretch: ultra-condensed;
+  
+}
+
+#menu {
+  width: 35px;
+  height: 35px;
+  margin-right: 30px;
+}
+
+#logo {
+  width: 212px;
+  margin-left: 150px;
+}
+
+@media only screen and (max-width: 760px) {
+  #helpOption {
+      display: none;
+  }
+  #headerRight {
+      width: 10%;
+      display: flex;
+      flex-direction: column-reverse;
+  }
+  #logInOption {
+      display: none;
+  }
+  #headerRightLeft>a {
+      padding: 0px;
+  }
+  #logo {
+      width: 170px;
+  }
+}
+/* header ends */
+*{
+  font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+}
+
+#logindiv {
+  width: 70%;
+  height: 100%;
+
+
+  margin-top: 200px;
+  display: flex;
+  gap: 3%;
+
+}
+
+#logindiv div {
+  width: 50%;
+  height: 100%;
+
+}
+#log{
+  margin-left: 220px;
+}
+
+#logindiv input {
+  outline: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  
+
+}
+
+.size {
+  font-size: 25px;
+ 
+}
+.size6{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  color:grey
+}
+.size p{
+  width: 180%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: grey;
+  font-size: 13px;
+
+}
+#bttn{
+  margin-top: 70px;
+}
+
+#bttn button {
+  width: 19em;
+  height: 2.7em;
+  background-color: black;
+  color: white;
+  margin-top: 13px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+#bttn button:hover ,#logbttn button:hover{
+  background-color: rgb(46, 46, 46);
+
+}
+
+#bttn button a{
+  color: white;
+  font-size: x-small;
+  text-decoration: none;
+  font-size: 10px;
+}
+#logbttn button a{
+  color: white;
+  font-size: x-small;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+#logbttn button {
+width: 19em;
+height: 2.7em;
+  background-color: black;
+  color: white;
+ 
+  margin-top: 45px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+}
+
+
+
+#inputEmail {
+  border: 0.01px solid gray;
+
+  width: 130%;
+  height: 20px;
+}
+#inputPasswd {
+  border: 0.01px solid gray;
+
+  width: 130%;
+  height: 30px;
+}
+
+@media only screen and (min-width:450px) and (max-width:800px){
+ 
+  #logindiv {
+      width: 100%;
+      height: 100%;
+  margin-top: 200px;
+   
+  font-size: 40px;
+      display: flex;
+      gap: 2%;
+  
+  }
+  #log{
+   margin-left: 10%;
+  
+      
+  }
+
+
+  #bttn button {
+      width: 10em;
+      height: 3em;
+      background-color: black;
+      color: white;
+      margin-top: 5px;
+  }
+  #logbttn button {
+      width: 10em;
+      height: 3em;
+        background-color: black;
+        color: white;
+       
+        margin-top: 45px;
+     
+    }
+    #bttn{
+      margin-top: 60px;
+  }
+  .size {
+      font-size: 30px;
+  
+  }
+  .size6{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 10px;
+  }
+  .size p{
+      width: 150%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      font-size: 15px;
+  
+  }
+  
+
+}
+@media only screen and (min-width:50px) and (max-width:449px){
+#logindiv>#reg{
+  display: none;
+}
+.size p{
+  width: 150%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 35px;
+
+}
+#inputEmail {
+  border: 0.01px solid gray;
+
+  width: 200%;
+  height: 20px;
+}
+#inputPasswd {
+  border: 0.01px solid gray;
+
+  width: 200%;
+  height: 30px;
+}
+
+
+}
+/* footer */
+#container-bottom{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  font-size: 10px;
+  line-height: 25px;
+  height: 600px;
+  color: gray;
+  margin-left: 200px;
+  margin-top: 300px;
+}
+#container-bottom1{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 150px;
+  color: gray;
+  margin-left: 200px;
+}
+#container-bottom1 > div +div{
+  margin-right: 200px;
+}
+#container-bottom2{
+  font-size: 10px;
+  height: 250px;
+  color: gray;
+  margin-left: 200px;
+}
+
+.bottom-heading{
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 45px;
+}
