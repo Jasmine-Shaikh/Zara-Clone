@@ -9,31 +9,31 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <!-- <link rel="stylesheet" href="index.css"> -->
     <style>
-        *{
-        font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
-        font-stretch: ultra-condensed;
-        margin: 0%;
-        padding: 0%;
-       }
+        * {
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+            margin: 0%;
+            padding: 0%;
+        }
         /*-------------------- Header ------------------------- */
-
+        
         header {
             width: 100%;
             padding: 12px 24px 20px 24px;
             position: fixed;
             margin: 0px;
         }
-
+        
         #headerContents {
             display: flex;
             justify-content: space-between;
             width: 100%;
         }
-
+        
         #headerLeft {
             display: flex;
         }
-
+        
         #headerRight {
             width: 30%;
             display: flex;
@@ -41,7 +41,7 @@
             padding: 10px;
             justify-content: space-between;
         }
-
+        
         #headerRightLeft>a {
             padding: 0% 60% 0% 0%;
             font-size: 13px;
@@ -52,12 +52,12 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #headerRightRight {
             display: flex;
             width: fit-content;
         }
-
+        
         #headerRightRight>a {
             text-decoration: none;
             padding: 0px 10px 0px 10px;
@@ -67,88 +67,78 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #menu {
             width: 35px;
             height: 35px;
             margin-right: 30px;
         }
-
+        
         #logo {
             width: 212px;
         }
-
+        
         @media only screen and (max-width: 760px) {
             #helpOption {
                 display: none;
             }
-
             #headerRight {
                 width: 10%;
                 display: flex;
                 flex-direction: column-reverse;
             }
-
             #logInOption {
                 display: none;
             }
-
             #headerRightLeft>a {
                 padding: 0px;
             }
-
             #logo {
                 width: 170px;
             }
         }
-
-
         /*-------------------- Header End------------------------- */
-
-
         /*------------- Modal ---------------*/
-
+        
         .menuOpacity {
             animation: opac 0.8s
         }
-
+        
         @keyframes opac {
             from {
                 opacity: 0
             }
-
             to {
                 opacity: 1
             }
         }
-
+        
         .animatedMenuShow {
             animation: show 0.8s;
             animation-fill-mode: forwards;
         }
-
+        
         @keyframes show {
             0% {
                 opacity: 1
             }
-
             100% {
                 opacity: 0
             }
         }
-
+        
         #menuModal {
             display: none;
             position: fixed;
             z-index: 1;
             padding-top: 100px;
         }
-
+        
         #menuTop>ul {
             padding-left: 0px;
             display: flex;
         }
-
+        
         li {
             list-style: none;
             padding: 0px 5px 0px 17px;
@@ -158,21 +148,21 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #selected {
             font-weight: bold;
         }
-
+        
         #emptySpace {
             height: 100px;
         }
-
+        
         #menuHeader {
             background-color: white;
             position: fixed;
             width: max-content;
         }
-
+        
         #menuOptions {
             position: fixed;
             overflow: hidden;
@@ -180,16 +170,16 @@
             width: 25%;
             background-color: white;
         }
-
+        
         #menuOptions:hover {
             overflow-y: scroll;
         }
-
+        
         #menuMainOptions>ul {
             padding-left: 10px;
             padding-right: 10px;
         }
-
+        
         #menuMainOptions>ul>li>a {
             text-decoration: none;
             font-size: 13px;
@@ -198,83 +188,76 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #menuMainOptions>ul>li>a:hover {
             color: black;
             text-decoration: underline;
         }
-
+        
         #menuExtraOptions>ul {
             padding-left: 10px;
             padding-right: 10px;
             font-weight: 70;
         }
-
+        
         #menuExtraOptions>ul>li {
             padding-top: 40px;
         }
-
-        ::-webkit-scrollbar {
+        
+         ::-webkit-scrollbar {
             width: 1px;
         }
-
-        ::-webkit-scrollbar-track {
+        
+         ::-webkit-scrollbar-track {
             background: #a5a5a5;
         }
-
-        ::-webkit-scrollbar-thumb {
+        
+         ::-webkit-scrollbar-thumb {
             background: black;
         }
-
-
         /*------------- Modal ---------------*/
-
-
         /*/// ---------------------Landing Page Carousel---------------------------*/
-
-
+        
         .crousel-wrapper ul {
             width: 50%;
             margin: auto;
             /* border: 1px solid red; */
             /* text-align: center; */
         }
-        .crousel-wrapper>ul{
-                display: flex;
-                flex-wrap: nowrap;
+        
+        .crousel-wrapper>ul {
+            display: flex;
+            flex-wrap: nowrap;
         }
+        
         .crousel-wrapper>ul>li {
             display: inline-block;
             margin: 10px;
             margin-top: 100px;
         }
-
-
+        
         .crousel-wrapper>ul>li>a {
             text-decoration: none;
             color: rgb(0, 0, 0);
-
         }
-
+        
         @media all and (min-width: 450px) and (max-width: 850px) {
-            .crousel-wrapper>ul{
+            .crousel-wrapper>ul {
                 margin-left: 0%;
                 display: flex;
                 flex-wrap: nowrap;
             }
         }
-
+        
         @media all and (min-width: 50px) and (max-width: 450px) {
-            .crousel-wrapper>ul{
-              margin-left: 0%;
-              display: flex;
-              flex-wrap: nowrap;
+            .crousel-wrapper>ul {
+                margin-left: 0%;
+                display: flex;
+                flex-wrap: nowrap;
             }
         }
-
         /* main page css start */
-
-
+        
         #container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -285,52 +268,45 @@
             margin-top: 20px;
             /* padding-top: 15vh; */
         }
-
+        
         #box1 {
             display: flex;
             justify-content: space-between;
             /* width: 100%; */
         }
-
+        
         p {
             margin-top: 6px;
             font-size: small;
         }
-
+        
         img {
             display: block;
             width: 100%;
         }
-
+        
         @media all and (min-width: 450px) and (max-width: 850px) {
             #container {
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: repeat(14, auto);
                 margin: auto;
-                
             }
         }
-
+        
         @media all and (min-width: 50px) and (max-width: 450px) {
             #container {
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(18, auto);
-
             }
         }
-
         /* mani page css end */
-
+        
         #main-container {
             width: 85%;
             margin: auto;
-
-
         }
-
-
         /* //added css for footer section  */
-
+        
         #container-bottom {
             display: flex;
             flex-direction: row;
@@ -340,9 +316,8 @@
             height: 600px;
             margin-top: 600px;
             color: gray;
-
         }
-
+        
         #container-bottom1 {
             display: flex;
             flex-direction: row;
@@ -350,19 +325,19 @@
             height: 150px;
             color: gray;
         }
-
+        
         #container-bottom2 {
             font-size: 10px;
             height: 250px;
             color: gray;
         }
-
+        
         .bottom-heading {
             font-size: 18px;
             font-weight: bold;
             line-height: 45px;
         }
-
+        
         .box>div:first-child {
             color: black;
         }
@@ -375,13 +350,10 @@
         <div id="headerContents">
             <div id="headerLeft">
                 <div>
-                    <input type="image" name="menu"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU"
-                        id="menu" onclick="document.getElementById('menuModal').style.display='block'">
+                    <input type="image" name="menu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU" id="menu" onclick="document.getElementById('menuModal').style.display='block'">
                 </div>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo"
-                        id="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
                 </div>
 
             </div>
@@ -390,9 +362,9 @@
                     <a href="">SEARCH</a>
                 </div>
                 <div id="headerRightRight">
-                    <a href="" id="logInOption">LOG IN</a>
+                    <a href="./login.html" id="logInOption">LOG IN</a>
                     <a href="" id="helpOption">HELP</a>
-                    <a href="">CART</a>
+                    <a href="./cart-page.html">CART</a>
                 </div>
             </div>
         </div>
@@ -423,9 +395,9 @@
                         <li>TROUSERS</li>
                         <li>TOPS | CORSETS</li>
                         <li>BODYSUITS</li>
-                        <li><a href="T-Shirts.html">T-SHIRTS</a></li>
+                        <li><a href="./T-Shirts.html">T-SHIRTS</a></li>
                         <li>JEANS</li>
-                        <li><a href="Skirts.html">SKIRTS</a></li>
+                        <li><a href="./Skirts.html">SKIRTS</a></li>
                         <li>SHORTS | SKORTS</li>
                         <li>CO-ORDS</li>
                         <li>SUITS</li>
@@ -434,7 +406,7 @@
                         <li>SWEATSHIRTS</li>
                         <li>COATS | TRENCHCOATS</li>
                         <li>JACKETS | OVERSHIRTS</li>
-                        <li><a href="Shoes.html">SHOES</a></li>
+                        <li><a href="./Shoes.html">SHOES</a></li>
                         <li>BAGS</li>
                         <li>SWIMWEAR</li>
                         <li>ACCESSORIES</li>
@@ -536,8 +508,7 @@
         <div id="container-bottom1">
             <!-- start   -->
             <div>INDIA</div>
-            <div>ENGLISH
-                © ALL RIGHTS RESERVED</div>
+            <div>ENGLISH © ALL RIGHTS RESERVED</div>
 
 
             <!-- stop  -->
@@ -553,193 +524,155 @@
 
 
     <script>
-        var womansData = [
-            {
+        var womansData = [{
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/444/2335159941_2_2_1.jpg?ts=1649342414634",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2021/V/0/1/p/4424/159/800/2/w/444/4424159800_6_1_1.jpg?ts=1611826835336",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2021/I/0/1/p/4424/959/250/2/w/444/4424959250_6_1_1.jpg?ts=1635870678626",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2021/I/0/1/p/4424/159/710/2/w/204/4424159710_6_1_1.jpg?ts=1623747453873",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/4424/959/400/2/w/204/4424959400_6_1_1.jpg?ts=1647509002867",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2021/I/0/1/p/4424/959/600/2/w/204/4424959600_6_1_1.jpg?ts=1626770913505",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/2335/159/628/2/w/204/2335159628_6_1_1.jpg?ts=1643814558901",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/2335/159/539/2/w/204/2335159539_6_1_1.jpg?ts=1643814566919",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/1131/320/250/2/w/444/1131320250_1_1_1.jpg?ts=1649242622882",
                 name: "GIRLS’ PRINTED",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/1131/316/250/2/w/204/1131316250_1_1_1.jpg?ts=1649175495220",
                 name: "PRINTED T-SHIRT",
                 price: " ₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/1131/317/807/2/w/204/1131317807_2_1_1.jpg?ts=1649175481336",
                 name: "FADED-EFFECT P",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5644/070/250/2/w/204/5644070250_2_1_1.jpg?ts=1649342418103",
                 name: "©DISNEY’S BAM",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5580/031/250/3/w/204/5580031250_1_1_1.jpg?ts=1649343891993",
                 name: "T-SHIRT WITH CUTWORK EMBROIDERY",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5580/022/250/2/w/204/5580022250_2_2_1.jpg?ts=1649342425214",
                 name: "JACQUARD COR",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5580/031/250/2/w/204/5580031250_2_1_1.jpg?ts=1649171519386",
                 name: "T-SHIRT WITH CUTWORK EMBROIDERY",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/6050/153/506/2/w/204/6050153506_2_1_1.jpg?ts=1649344986351",
                 name: "CROPPED T-SHIRT",
                 price: "₹ 690.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/2712/366/511/2/w/204/2712366511_1_1_1.jpg?ts=1649348027219",
                 name: "CROCHET TOP",
                 price: "₹ 1,990.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/2712/374/712/2/w/204/2712374712_1_1_1.jpg?ts=1649348026153",
                 name: "CROCHET SWEA",
                 price: "₹ 2,890.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3641/308/250/2/w/563/3641308250_1_1_1.jpg?ts=1649345518270",
                 name: "RUFFLED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3641/308/800/2/w/204/3641308800_1_1_1.jpg?ts=1649345518106",
                 name: "RUFFLED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3641/308/620/2/w/563/3641308620_1_1_1.jpg?ts=1649345516399",
                 name: "RUFFLED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3641/308/300/2/w/563/3641308300_1_1_1.jpg?ts=1649345516303",
                 name: "RUFFLED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3641/308/250/2/w/563/3641308250_1_1_1.jpg?ts=1649345518270",
                 name: "RUFFLED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/1131/321/250/2/w/563/1131321250_1_1_1.jpg?ts=1649412966610",
                 name: "GIRLS’ PRINTED T-SHIRT",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5039/325/250/2/w/563/5039325250_1_1_1.jpg?ts=1649345518291",
                 name: "PRINTED NY T-SHIRT",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5644/313/060/2/w/563/5644313060_1_1_1.jpg?ts=1649345519857",
                 name: "PRINTED T-SHIRT",
                 price: "₹ 1,590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5039/371/700/2/w/563/5039371700_1_1_1.jpg?ts=1642089001914",
                 name: "HALTER NECK BODYSUIT",
                 price: "₹ 1,290.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2021/V/0/1/p/5039/371/613/2/w/563/5039371613_1_1_1.jpg?ts=1610541945741",
                 name: "HALTER NECK BODYSUIT",
                 price: "₹ 1,290.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5039/372/700/2/w/563/5039372700_1_1_1.jpg?ts=1640105856787",
                 name: "HALTER NECK BODYSUIT",
                 price: "₹ 1,290.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0962/349/620/2/w/563/0962349620_1_1_1.jpg?ts=1646049201031",
                 name: "BASIC T-SHIRT",
                 price: "₹ 690.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0962/349/800/2/w/563/0962349800_1_1_1.jpg?ts=1646049200469",
                 name: "BASIC T-SHIRT",
                 price: "₹ 690.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0962/349/620/2/w/563/0962349620_1_1_1.jpg?ts=1646049201031",
                 name: "BASIC T-SHIRT",
                 price: "₹ 690.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0962/349/500/2/w/563/0962349500_6_1_1.jpg?ts=1645692310470",
                 name: "BASIC T-SHIRT",
                 price: "₹ 690.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0264/370/400/2/w/563/0264370400_1_1_1.jpg?ts=1649175487762",
                 name: "PRINTED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0264/370/063/2/w/563/0264370063_1_1_1.jpg?ts=1649175479209",
                 name: "PRINTED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0962/349/800/2/w/563/0962349800_1_1_1.jpg?ts=1646049200469",
                 name: "BASIC T-SHIRT",
                 price: "₹ 690.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0264/370/300/2/w/563/0264370300_1_1_1.jpg?ts=1646832093918",
                 name: "PRINTED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0264/370/064/2/w/563/0264370064_1_1_1.jpg?ts=1646236398463",
                 name: "PRINTED T-SHIRT",
                 price: "₹ 790.00",
@@ -749,92 +682,78 @@
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0264/370/620/2/w/563/0264370620_1_1_1.jpg?ts=1646236388423",
                 name: "PRINTED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/0264/370/500/2/w/563/0264370500_1_1_1.jpg?ts=1646236407686",
                 name: "PRINTED T-SHIRT",
                 price: "₹ 790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/5580/012/800/2/w/563/5580012800_1_1_1.jpg?ts=1646908545976",
                 name: "ASYMMETRIC FRILLED BODYT",
                 price: "₹ 1,790.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/2335/157/611/2/w/563/2335157611_1_1_1.jpg?ts=1646908543362",
                 name: "STRAPPY TOP WITH GATHERING",
                 price: "₹ 990.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/302/800/17/w/563/3253302800_1_1_1.jpg?ts=1645639523434",
                 name: "RIBBED T-SHIRT",
                 price: "₹ 490.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/302/800/2/w/563/3253302800_1_1_1.jpg?ts=1644506264900",
                 name: "RIBBED T-SHIRT",
                 price: "₹ 490.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/302/250/2/w/563/3253302250_1_1_1.jpg?ts=1644506259879",
                 name: "RIBBED T-SHIRT",
                 price: "₹ 490.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/302/630/2/w/563/3253302630_1_1_1.jpg?ts=1644601893906",
                 name: "RIBBED T-SHIRT",
                 price: "₹ 490.0",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/302/710/2/w/563/3253302710_1_1_1.jpg?ts=1644506261558",
                 name: "RIBBED T-SHIRT",
                 price: "₹ 490.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/302/406/2/w/563/3253302406_1_1_1.jpg?ts=1644587571384",
                 name: "RIBBED T-SHIRT",
                 price: "₹ 490.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/303/250/2/w/563/3253303250_1_1_1.jpg?ts=1644506263316",
                 name: "RIBBED TOP",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/303/800/2/w/563/3253303800_1_1_1.jpg?ts=1644576785568",
                 name: "RIBBED TOP",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/303/629/2/w/563/3253303629_1_1_1.jpg?ts=1644576772169",
                 name: "RIBBED TOP",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/303/710/2/w/563/3253303710_1_1_1.jpg?ts=1644506265961",
                 name: "RIBBED TOP",
                 price: "₹ 590.00",
-            },
-            {
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/0/1/p/3253/303/800/2/w/563/3253303800_1_1_1.jpg?ts=1644576785568",
                 name: "RIBBED TOP",
                 price: "₹ 590.00",
             },
         ]
 
-        womansData.forEach(function (womanData) {
+        womansData.forEach(function(womanData) {
             var container = document.createElement('div');
 
             var img = document.createElement('img');
             img.src = womanData.image_url;
 
-        
-            let a=document.createElement('a');
-            a.setAttribute('href','./product-details.html');
+
+            let a = document.createElement('a');
+            a.setAttribute('href', './product-details.html');
             a.setAttribute('target', '_blank');
             a.append(img);
 
-        
+
             var box1 = document.createElement('div');
             box1.setAttribute('id', 'box1');
 
