@@ -21,7 +21,7 @@ function logInBtn(event) {
   }
   if (count == 1) {
     alert("Login Successful");
-    window.location.href = "shipping.html";
+    window.location.href = "homePage.html";
   } else {
     alert("Invalid Credentials");
   }
