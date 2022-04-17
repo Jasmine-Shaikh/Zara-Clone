@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZARA India | New Collection Online</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">-
+    <style>
+        *{
+        font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+        font-stretch: ultra-condensed;
+        margin: 0%;
+        padding: 0%;
+       }
+        
+        /*-------------------- Header ------------------------- */
+
+        header {
+            width: 100%;
+            padding: 12px 24px 20px 24px;
+            position: fixed;
+            margin: 0px;
+        }
+
+        #headerContents {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        #headerLeft {
+            display: flex;
+        }
+
+        #headerRight {
+            width: 30%;
+            display: flex;
+            margin-right: 30px;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        #headerRightLeft>a {
+            padding: 0% 60% 0% 0%;
+            font-size: 13px;
+            text-decoration: none;
+            border-bottom: 1px solid black;
+            color: rgb(41, 41, 41);
+            font-weight: 700;
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+
+        #headerRightRight {
+            display: flex;
+            width: fit-content;
+        }
+
+        #headerRightRight>a {
+            text-decoration: none;
+            padding: 0px 10px 0px 10px;
+            font-size: 13px;
+            color: rgb(41, 41, 41);
+            font-weight: 100;
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+
+        #menu {
+            width: 35px;
+            height: 35px;
+            margin-right: 30px;
+        }
+
+        #logo {
+            width: 212px;
+        }
+
+        @media only screen and (max-width: 760px) {
+            #helpOption {
+                display: none;
+            }
+
+            #headerRight {
+                width: 10%;
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            #logInOption {
+                display: none;
+            }
+
+            #headerRightLeft>a {
+                padding: 0px;
+            }
+
+            #logo {
+                width: 170px;
+            }
+        }
+
+
+        /*-------------------- Header End------------------------- */
+
+
+        /*------------- Modal ---------------*/
+
+        .menuOpacity {
+            animation: opac 0.8s
+        }
+
+        @keyframes opac {
+            from {
+                opacity: 0
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .animatedMenuShow {
+            animation: show 0.8s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes show {
+            0% {
+                opacity: 1
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        #menuModal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+        }
+
+        #menuTop>ul {
+            padding-left: 0px;
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            padding: 0px 5px 0px 17px;
+            font-size: 13px;
+            color: rgb(75, 75, 75);
+            font-weight: 70;
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+
+        #selected {
+            font-weight: bold;
+        }
+
+        #emptySpace {
+            height: 100px;
+        }
+
+        #menuHeader {
+            background-color: white;
+            position: fixed;
+            width: max-content;
+        }
+
+        #menuOptions {
+            position: fixed;
+            overflow: hidden;
+            max-height: 380px;
+            width: 25%;
+            background-color: white;
+        }
+
+        #menuOptions:hover {
+            overflow-y: scroll;
+        }
+
+        #menuMainOptions>ul {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        #menuMainOptions>ul>li>a {
+            text-decoration: none;
+            font-size: 13px;
+            color: rgb(75, 75, 75);
+            font-weight: 70;
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+
+        #menuMainOptions>ul>li>a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        #menuExtraOptions>ul {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-weight: 70;
+        }
+
+        #menuExtraOptions>ul>li {
+            padding-top: 40px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 1px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #a5a5a5;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: black;
+        }
+
+
+        /*------------- Modal ---------------*/
+
+
+        /*/// ---------------------Landing Page Carousel---------------------------*/
+
+        .crousel-wrapper ul {
+            width: 50%;
+            margin: auto;
+            /* border: 1px solid red; */
+            /* text-align: center; */
+        }
+        .crousel-wrapper>ul{
+                display: flex;
+                flex-wrap: nowrap;
+        }
+        .crousel-wrapper>ul>li {
+            display: inline-block;
+            margin: 10px;
+            margin-top: 100px;
+        }
+
+
+        .crousel-wrapper>ul>li>a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+
+        }
+
+        @media all and (min-width: 450px) and (max-width: 850px) {
+            .crousel-wrapper>ul{
+                margin-left: 0%;
+                display: flex;
+                flex-wrap: nowrap;
+            }
+        }
+
+        @media all and (min-width: 50px) and (max-width: 450px) {
+            .crousel-wrapper>ul{
+              margin-left: 0%;
+              display: flex;
+              flex-wrap: nowrap;
+            }
+        }
+
+        /* main page css start */
+
+
+        #container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(8, auto);
+            gap: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+            /* padding-top: 15vh; */
+        }
+
+        #box1 {
+            display: flex;
+            justify-content: space-between;
+            /* width: 100%; */
+        }
+
+        p {
+            margin-top: 6px;
+            font-size: small;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        @media all and (min-width: 450px) and (max-width: 850px) {
+            #container {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(10, auto);
+                margin: auto;
+                
+            }
+        }
+
+        @media all and (min-width: 50px) and (max-width: 450px) {
+            #container {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(14, auto);
+
+            }
+        }
+
+        /* mani page css end */
+
+         
+        #main-container {
+            width: 85%;
+            margin: auto;
+
+
+        }
+
+
+        /* //added css for footer section  */
+
+        #container-bottom {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            font-size: 10px;
+            line-height: 25px;
+            height: 600px;
+            margin-top: 600px;
+            color: gray;
+
+        }
+
+        #container-bottom1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 150px;
+            color: gray;
+        }
+
+        #container-bottom2 {
+            font-size: 10px;
+            height: 250px;
+            color: gray;
+        }
+
+        .bottom-heading {
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 45px;
+        }
+
+        .box>div:first-child {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+     <!-- // ---------------------Landing Page Carousel  End------------------------------>
+     <header>
+        <div id="headerContents">
+            <div id="headerLeft">
+                <div>
+                    <input type="image" name="menu"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU"
+                        id="menu" onclick="document.getElementById('menuModal').style.display='block'">
+                </div>
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo"
+                        id="logo">
+                </div>
+
+            </div>
+            <div id="headerRight">
+                <div id="headerRightLeft">
+                    <a href="">SEARCH</a>
+                </div>
+                <div id="headerRightRight">
+                    <a href="" id="logInOption">LOG IN</a>
+                    <a href="" id="helpOption">HELP</a>
+                    <a href="">CART</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Modal -->
+    <div id="menuModal" class="menuOpacity">
+        <div class="menuContent">
+            <header id="menuHeader">
+                <div id="menuTop">
+                    <span class="close">&times;</span>
+                    <ul>
+                        <li id="selected">WOMAN</li>
+                        <li>MAN</li>
+                        <li>KIDS</li>
+                    </ul>
+                </div>
+            </header>
+            <div id="emptySpace"></div>
+            <div id="menuOptions">
+                <div id="menuMainOptions">
+                    <ul>
+                        <li>NEW</li>
+                        <li>LINEN</li>
+                        <li>BEST SELLERS</li>
+                        <li>BLAZERS</li>
+                        <li>DRESSES | JUMPSUITS</li>
+                        <li>SHIRTS</li>
+                        <li>TROUSERS</li>
+                        <li>TOPS | CORSETS</li>
+                        <li>BODYSUITS</li>
+                        <li><a href="T-Shirts.html">T-SHIRTS</a></li>
+                        <li>JEANS</li>
+                        <li><a href="Skirts.html">SKIRTS</a></li>
+                        <li>SHORTS | SKORTS</li>
+                        <li>CO-ORDS</li>
+                        <li>SUITS</li>
+                        <li>BASICS</li>
+                        <li>KNITWEAR</li>
+                        <li>SWEATSHIRTS</li>
+                        <li>COATS | TRENCHCOATS</li>
+                        <li>JACKETS | OVERSHIRTS</li>
+                        <li><a href="Shoes.html">SHOES</a></li>
+                        <li>BAGS</li>
+                        <li>SWIMWEAR</li>
+                        <li>ACCESSORIES</li>
+                        <li>PERFUMES</li>
+                        <li>LIME GLAM</li>
+                        <li>S P E C I A L E D I T I O N</li>
+                    </ul>
+                </div>
+                <div id="menuExtraOptions">
+                    <ul>
+                        <li>JOIN LIFE</li>
+                        <li>+ INFO</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal End -->
+    <div class="crousel">
+        <div class="crousel-wrapper">
+            <ul>
+                <li>
+                    <a href="Skirts.html"><b>VIEW ALL</b> </a>
+                </li>
+                <li>
+                    <a href="Skirts.html">BASICS</a>
+                </li>
+                <li>
+                    <a href="Skirts.html">SHORT SLEEVES</a>
+                </li>
+                <li>
+                    <a href="Skirts.html">SLEEVELESS</a>
+                </li>
+                <li>
+                    <a href="Skirts.html">CROPPED</a>
+                </li>
+                <li>
+                    <a href="Skirts.html">LONG SLEEVES</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div id="container">
+
+    </div>
+
+    <!-- // add footer common section  -->
+    <div id="main-container">
+        <div id="container-bottom">
+            <!-- START  -->
+            <div class="box">
+                <div class="bottom-heading">HELP</div>
+                <div>SHOP AT ZARA.COM</div>
+                <div>PRODUCT</div>
+                <div>PAYMENT</div>
+                <div>SHIPPING</div>
+                <div>EXCHANGES AND RETURNS</div>
+                <div>SHOPS AND COMPANY</div>
+                <div>CLOTHES COLLECTION</div>
+                <div>PROGRAMME</div>
+                <div>MY ACCOUNT</div>
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">FOLLOW US</div>
+                <div>NEWSLETTER</div>
+                <div>INSTAGRAM</div>
+                <div>FACEBOOK</div>
+                <div>TWITTER</div>
+                <div>PINTEREST</div>
+                <div>YOUTUBE</div>
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">COMPANY</div>
+                <div>ABOUT US</div>
+                <div>JOIN LIFE</div>
+                <div>OFFICES</div>
+                <div>STORES</div>
+                <div>WORK WITH US</div>
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">POLICIES</div>
+                <div>PRIVACY POLICY</div>
+                <div>PURCHASE CONDITIONS</div>
+                <div>COOKIES SETTINGS</div>
+            </div>
+
+
+            <!-- STOP  -->
+        </div>
+
+        <div id="container-bottom1">
+            <!-- start   -->
+            <div>INDIA</div>
+            <div>ENGLISH
+                © ALL RIGHTS RESERVED</div>
+
+
+            <!-- stop  -->
+        </div>
+
+        <div id="container-bottom2">
+            <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+            <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+            <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+        </div>
+    </div>
+
+
+    <script>
+        var womansData = [
+            {   
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3218/924/052/2/w/444/3218924052_1_1_1.jpg?ts=1648653833690",
+                name: "MIDI SKIRT WITH SIDE DRAPED DETAIL",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3218/924/052/2/w/444/3218924052_6_1_1.jpg?ts=1647361021844",
+                name: "MIDI SKIRT WITH SIDE DRAPED DETAIL",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3267/913/300/2/w/444/3267913300_2_1_1.jpg?ts=1648125127818",
+                name: "EMBROIDERED MINI SKIRT",
+                price: "₹ 3,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3026/922/250/2/w/444/3026922250_2_1_1.jpg?ts=1648124019968",
+                name: "SHORT FRILLED SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2551/636/800/2/w/444/2551636800_1_1_1.jpg?ts=1645029267256",
+                name: "DRAPED MIDI SKIRT",
+                price: "₹ 2,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/8197/081/405/2/w/444/8197081405_2_2_1.jpg?ts=1647596637239",
+                name: "DENIM SKIRT",
+                price: "₹ 1,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/4387/063/450/2/w/444/4387063450_1_1_1.jpg?ts=1647857914009",
+                name: "LINEN CAPE SKIRT",
+                price: "₹ 3,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/9878/105/942/2/w/444/9878105942_1_1_1.jpg?ts=1648203490724",
+                name: "FRILLED MINI SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3013/525/500/2/w/444/3013525500_2_1_1.jpg?ts=1646221585099",
+                name: "SKORT WITH SLIT DETAIL ",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3013/542/251/2/w/444/3013542251_1_1_1.jpg?ts=1646067227375",
+                name: "SKORT WITH SLIT DETAIL",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/7969/051/400/2/w/444/7969051400_1_1_1.jpg?ts=1649153597309",
+                name: "SEQUINNED MIDI SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3391/685/712/2/w/444/3391685712_1_1_1.jpg?ts=1649232267241",
+                name: "DRAPED SATIN SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3353/660/800/2/w/444/3353660800_2_3_1.jpg?ts=1649254187481",
+                name: "STRETCHY LINEN BLEND SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/8342/008/050/2/w/444/8342008050_1_1_1.jpg?ts=1649254187129",
+                name: "FLORAL MINI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/7385/058/445/2/w/444/7385058445_6_1_1.jpg?ts=1648725679460",
+                name: "POLKA DOT MINI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/8197/089/400/2/w/444/8197089400_2_2_1.jpg?ts=1645526196686",
+                name: "DENIM MIDI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3223/332/250/2/w/444/3223332250_1_1_1.jpg?ts=1647592904715",
+                name: "DRAPED MINI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3223/636/645/2/w/444/3223636645_2_1_1.jpg?ts=1647446114321",
+                name: "DRAPED MINI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2731/051/250/12/w/444/2731051250_1_1_1.jpg?ts=1648126716498",
+                name: "EMBROIDERED LONG SKIRT",
+                price: "₹ 6,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/8197/191/406/2/w/444/8197191406_2_1_1.jpg?ts=1647969866284",
+                name: "DENIM MIDI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2221/575/617/2/w/444/2221575617_1_1_1.jpg?ts=1646667522153",
+                name: "HIGH-WAIST MINI SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2789/157/500/2/w/444/2789157500_2_3_1.jpg?ts=1646653404322",
+                name: "PRINTED SHORT SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2789/157/500/12/w/444/2789157500_1_1_1.jpg?ts=1646653459459",
+                name: "PRINTED SHORT SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/8351/039/330/2/w/444/8351039330_2_10_1.jpg?ts=1645522459443",
+                name: "TEXTURED SKIRT WITH FAUX PEARL BEAD BUTTON DETAIL",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3564/079/251/2/w/444/3564079251_2_10_1.jpg?ts=1645521927213",
+                name: "SHINY BUCKLED MINI SKIRT",
+                price: "₹ 2,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2731/051/250/2/w/444/2731051250_1_1_1.jpg?ts=1646757797945",
+                name: "EMBROIDERED LONG SKIRT",
+                price: "₹ 6,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/4786/054/064/2/w/444/4786054064_1_1_1.jpg?ts=1646757801802",
+                name: "EMBROIDERED MIDI SKIRT",
+                price: "₹ 5,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2221/575/617/3/w/444/2221575617_1_1_1.jpg?ts=1646845619173",
+                name: "HIGH-WAIST MINI SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3008/042/710/2/w/444/3008042710_15_1_1.jpg?ts=1645012947566",
+                name: "EMBROIDERED MIDI SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/4886/049/712/2/w/444/4886049712_1_1_1.jpg?ts=1648126605473",
+                name: "PLEATED SKIRT WITH EMBROIDERY",
+                price: "₹ 7,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2397/142/713/2/w/444/2397142713_1_1_1.jpg?ts=1645012958645",
+                name: "EMBROIDERED LONG SKIRT",
+                price: "₹ 5,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3666/064/093/2/w/444/3666064093_2_2_1.jpg?ts=1646743002371",
+                name: "PRINTED SATIN SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/4387/047/506/2/w/444/4387047506_2_1_1.jpg?ts=1646743011944",
+                name: "SATIN WRAP SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3564/078/800/2/w/444/3564078800_2_1_1.jpg?ts=1645519660221",
+                name: "DRAPED MIDI SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2731/070/500/2/w/444/2731070500_2_4_1.jpg?ts=1646384242202",
+                name: "EMBROIDERED LINEN BLEND CAPE SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2903/968/430/2/w/444/2903968430_2_2_1.jpg?ts=1646384231065",
+                name: "MINI SKIRT WITH POCKETS",
+                price: "₹ 2,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/7563/045/707/2/w/204/7563045707_2_1_1.jpg?ts=1646384232706",
+                name: "LINEN BLEND WRAP SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2960/421/511/2/w/204/2960421511_1_1_1.jpg?ts=1647604670562",
+                name: "PRINTED MINI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2407/322/800/2/w/204/2407322800_2_9_1.jpg?ts=1643806489207",
+                name: "FAUX LEATHER MINI SKIRT",
+                price: "₹ 2,590.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3125/579/712/2/w/204/3125579712_2_4_1.jpg?ts=1649236536554",
+                name: "LINEN-BLEND WRAP SKIRT WITH KNOT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3495/574/505/2/w/204/3495574505_2_1_1.jpg?ts=1649174158592",
+                name: "LINEN BLEND PRINTED SKIRT",
+                price: "₹ 2,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3453/574/505/2/w/204/3453574505_15_1_1.jpg?ts=1649174159871",
+                name: "LINEN BLEND WRAP SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/4886/047/615/12/w/204/4886047615_2_2_1.jpg?ts=1649175147338",
+                name: "CONTRASTING PLEATED SKIRT",
+                price: "₹ 5,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3146/228/330/2/w/204/3146228330_6_1_1.jpg?ts=1648138590346",
+                name: "PRINTED SHORT SKIRT",
+                price: "₹ 2,890.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/3453/574/505/2/w/204/3453574505_6_1_1.jpg?ts=1649154413852",
+                name: "LINEN BLEND WRAP SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2731/051/250/12/w/444/2731051250_1_1_1.jpg?ts=1648126716498",
+                name: "LINEN BLEND PRINTED SKIRT",
+                price: "₹ 2,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2731/071/403/2/w/204/2731071403_1_1_1.jpg?ts=1648564498952",
+                name: "EMBROIDERED LINEN BLEND SKIRT",
+                price: "₹ 3,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/5598/046/400/2/w/204/5598046400_1_1_1.jpg?ts=1648567790597",
+                name: "LONG PRINTED SKIRT",
+                price: "₹ 4,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2731/056/330/2/w/204/2731056330_2_4_1.jpg?ts=1648738336273",
+                name: "EMBROIDERED LINEN SKIRT",
+                price: "₹ 5,990.00",
+            },
+            {
+                image_url: "https://static.zara.net/photos///2022/V/0/1/p/2183/057/400/2/w/204/2183057400_2_1_1.jpg?ts=1648564519048",
+                name: "PRINTED SARONG SKIRT",
+                price: "₹ 2,890.00",
+            },
+        ]
+
+        womansData.forEach(function (womanData) {
+            var container = document.createElement('div');
+
+            var img = document.createElement('img');
+            img.src = womanData.image_url;
+
+            let a=document.createElement('a');
+            a.setAttribute('href','./product-details.html');
+            a.setAttribute('target', '_blank');
+            a.append(img);
+
+            var box1 = document.createElement('div');
+            box1.setAttribute('id', 'box1');
+
+            var name = document.createElement('p');
+            name.textContent = womanData.name;
+            
+
+            var price = document.createElement('p');
+            price.innerText = womanData.price;
+           
+
+
+            box1.append(name, price);
+            container.append(a, box1);
+            document.querySelector('#container').append(container);
+        });
+
+    </script>
+</body>
+
+</html>
