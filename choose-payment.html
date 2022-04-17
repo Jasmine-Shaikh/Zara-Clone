@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Order - Payment</title>
+    <link rel="icon" type="image/x-icon" href="./fav icon/favicon.ico">
+    <style>
+        *{
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+        #main-container{
+            width: 85%;
+            margin: auto;
+            
+          
+
+        }
+
+        #head{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10%;
+            margin-bottom: 50px;
+        }
+        #warning{
+            color: rgb(255, 140, 0);
+            font-size: 18px;
+            border: 1px solid rgb(255, 140, 0);
+            width: 600px;
+            padding: 20px;
+        }
+
+        #pay-option{
+            display: flex;
+            flex-direction: row;
+            margin-top: 100px;
+            gap: 20px;
+           
+            
+
+        }
+        .pay-option-item{
+            border: 1px solid rgb(209, 203, 203);
+            width: 135px;
+            height: 135px;
+            text-align: center;
+            color: black;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px;
+            margin-bottom: 20px;
+
+        }
+
+
+        /* //added css for footer section  */
+
+        #container-bottom{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            font-size: 10px;
+            line-height: 25px;
+            height: 600px;
+            margin-top: 300px;
+            color: gray;
+
+        }
+        #container-bottom1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 150px;
+            color: gray;
+        }
+        #container-bottom2{
+            font-size: 10px;
+            height: 250px;
+            color: gray;
+        }
+
+        .bottom-heading{
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 45px;
+        }
+        .box>div:first-child{
+            color: black;
+        }
+
+
+        /* // continue css  */
+
+        /* //FIX button css code  */
+        #continue{
+            display: flex;
+            position: fixed;
+            bottom: 25px;
+            right: 15px; 
+            
+            
+        }
+        #total-pirce-div{
+            display: flex;
+            flex-direction: column;
+            height: 40px;     
+            justify-content: center;
+            margin-right: 60px;
+        }
+        #continue-button{
+            background-color: black;
+            color: white;
+            padding-left: 90px;
+            padding-right: 90px;
+            height: 40px;
+            
+        }
+
+            /* //FIX button css code  */
+            /* // heaer code css  */
+ 
+ #headerContents {
+     display: flex;
+     justify-content: space-between;
+     width: 92%;
+     margin: auto;
+     margin-right: 10px;
+    margin-top: 15px;
+    
+    top: 0px;
+    
+ }
+ 
+
+
+ 
+ #headerRight {
+     width: max-content;
+     display: flex;
+     
+     padding: 10px;
+     justify-content: space-between;  
+      
+ }
+ 
+ */
+ 
+ #headerRightRight {
+     display: flex;
+     
+    
+ }
+ #help{
+    position: fixed;
+    right: 7.5%;
+ }
+ 
+ #headerRightRight>a {
+     text-decoration: none;
+     padding: 0px 10px 0px 10px;
+     font-size: 13px;
+     color: rgb(41, 41, 41);
+     font-weight: 100;
+     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+     font-stretch: ultra-condensed;
+    
+     
+ }
+ 
+
+ #logo {
+     width: 212px;
+     position: fixed;
+ }
+ /*-------------------- Header End------------------------- */
+
+ /* start media query  */
+
+
+ @media all and (min-width: 451px) and (max-width: 1050px) {
+    #head{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 25%;
+            margin-bottom: 50px;
+        }
+
+
+ 
+        #warning{
+            color: rgb(255, 140, 0);
+            font-size: 16px;
+            border: 1px solid rgb(255, 140, 0);
+            width: 400px;
+            padding: 20px;
+        }
+
+        #pay-option{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            margin-top: 100px;
+            gap: 15px;
+           
+            
+
+        }
+            
+      
+      }
+      
+      @media all and (min-width: 88px) and (max-width: 450px) {
+        #head{
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 30%;
+            margin-bottom: 50px;
+        }
+            
+      
+      }
+
+
+            
+
+    </style>
+</head>
+<body>
+    <!-- add heading part inside  -->
+    
+                    <!-- header section html  -->
+                    
+                    <header>
+                        <div id="headerContents">
+                            <div id="headerLeft">
+                              
+                                <div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+                                </div>
+                
+                            </div>
+                           
+                                <div id="headerRightRight">
+                                    
+                                    <a id="help" href="">HELP</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                <!-- end header section html  -->
+    <div id="main-container">
+        
+        <div id="head">CHOOSE A PAYMENT METHOD</div>
+        <div id="warning">Please note that only cards that use 3D Secure are accpted.
+            Contact your bank to activate it or for further instructions.
+        </div>
+        <div id="pay-option">
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg" alt="">
+                <p>VISA</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/icon-payment-mastercard.svg" alt="">
+                <p>MASTERCARD</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/icon-payment-amex_2.svg" alt="">
+                <p>AMERICAN EXPRESS</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/ru-pay.svg" alt="">
+                <p>RUPAY</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/net-banking.svg" alt="">
+                <p>NETBANKING</p>
+            </div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/upi.svg" alt="">
+                <p>UNIFIED PAYMENTS INTERFACE</p>
+            </div>
+        </div>
+
+        <div id="pay-option1">
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/co-djpen.svg" alt="">
+                <p>CASH ON DELIVERY</p>
+            </div>
+        </div>
+        <div>
+            <div class="pay-option-item">
+                <img src="https://static.zara.net/static/images/payment/payment/in.svg" alt="">
+                <p>IN CARD</p>
+            </div>
+
+        </div>
+
+        <!-- // add footer common section  -->
+        <div id="container-bottom">
+            <!-- START  -->
+            <div class="box">
+                    <div class="bottom-heading">HELP</div>
+                    <div>SHOP AT ZARA.COM</div>
+                    <div>PRODUCT</div>
+                    <div>PAYMENT</div>
+                    <div>SHIPPING</div>
+                    <div>EXCHANGES AND RETURNS</div>
+                    <div>SHOPS AND COMPANY</div>
+                    <div>CLOTHES COLLECTION</div>
+                    <div>PROGRAMME</div>
+                    <div>MY ACCOUNT</div>
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">FOLLOW US</div>
+                <div>NEWSLETTER</div>
+                <div>INSTAGRAM</div>
+                <div>FACEBOOK</div>
+                <div>TWITTER</div>
+                <div>PINTEREST</div>
+                <div>YOUTUBE</div>               
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">COMPANY</div>
+                <div>ABOUT US</div>
+                <div>JOIN LIFE</div>
+                <div>OFFICES</div>
+                <div>STORES</div>
+                <div>WORK WITH US</div>                              
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">POLICIES</div>
+                <div>PRIVACY POLICY</div>
+                <div>PURCHASE CONDITIONS</div>
+                <div>COOKIES SETTINGS</div>                                             
+            </div>
+
+
+        <!-- STOP  -->
+        </div>
+
+        <div id="container-bottom1">
+            <!-- start   -->
+            <div>INDIA</div>
+            <div>ENGLISH
+                © ALL RIGHTS RESERVED</div>
+
+
+            <!-- stop  -->
+        </div>
+
+        <div id="container-bottom2">
+            <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+            <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+            <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+        </div>
+
+        <!-- design fix continue button  -->
+        <div id="continue">
+            <div id="total-pirce-div">
+                <p id="total-price">Total Price</p>
+                
+
+            </div>
+            
+            <a href="./pay-card-detail.html">
+                <button id="continue-button">
+                    CONTINUE
+                </button>
+            </a>
+        </div>
+
+    </div>
+    
+</body>
+
+<script>
+//    show total price code 
+    var totalPrice;
+    if(JSON.parse(localStorage.getItem('cartData'))===null){
+        totalPrice=0;
+    }else{
+        totalPrice=JSON.parse(localStorage.getItem('cartData')).price;
+    }
+    
+   document.getElementById('total-price').innerText=`Total RS.  ${totalPrice}`;
+
+    
+    
+</script>
+<script>
+    var totalPrice=localStorage.getItem('totalPrice');
+    document.querySelector('#total-price').innerText=`Total Rs. ${totalPrice}/-`
+</script>
+</html>
