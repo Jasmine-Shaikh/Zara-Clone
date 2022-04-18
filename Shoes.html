@@ -8,35 +8,33 @@
     <title>ZARA India | New Collection Online</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <!-- <link rel="stylesheet" href="index.css"> -->
-    
+
     <style>
-        *{
-        font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
-        font-stretch: ultra-condensed;
-        margin: 0%;
-        padding: 0%;
-       }
-
-        
+        * {
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+            margin: 0%;
+            padding: 0%;
+        }
         /*-------------------- Header ------------------------- */
-
+        
         header {
             width: 100%;
             padding: 12px 24px 20px 24px;
             position: fixed;
             margin: 0px;
         }
-
+        
         #headerContents {
             display: flex;
             justify-content: space-between;
             width: 100%;
         }
-
+        
         #headerLeft {
             display: flex;
         }
-
+        
         #headerRight {
             width: 30%;
             display: flex;
@@ -44,7 +42,7 @@
             padding: 10px;
             justify-content: space-between;
         }
-
+        
         #headerRightLeft>a {
             padding: 0% 60% 0% 0%;
             font-size: 13px;
@@ -55,12 +53,12 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #headerRightRight {
             display: flex;
             width: fit-content;
         }
-
+        
         #headerRightRight>a {
             text-decoration: none;
             padding: 0px 10px 0px 10px;
@@ -70,88 +68,78 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #menu {
             width: 35px;
             height: 35px;
             margin-right: 30px;
         }
-
+        
         #logo {
             width: 212px;
         }
-
+        
         @media only screen and (max-width: 760px) {
             #helpOption {
                 display: none;
             }
-
             #headerRight {
                 width: 10%;
                 display: flex;
                 flex-direction: column-reverse;
             }
-
             #logInOption {
                 display: none;
             }
-
             #headerRightLeft>a {
                 padding: 0px;
             }
-
             #logo {
                 width: 170px;
             }
         }
-
-
         /*-------------------- Header End------------------------- */
-
-
         /*------------- Modal ---------------*/
-
+        
         .menuOpacity {
             animation: opac 0.8s
         }
-
+        
         @keyframes opac {
             from {
                 opacity: 0
             }
-
             to {
                 opacity: 1
             }
         }
-
+        
         .animatedMenuShow {
             animation: show 0.8s;
             animation-fill-mode: forwards;
         }
-
+        
         @keyframes show {
             0% {
                 opacity: 1
             }
-
             100% {
                 opacity: 0
             }
         }
-
+        
         #menuModal {
             display: none;
             position: fixed;
             z-index: 1;
             padding-top: 100px;
         }
-
+        
         #menuTop>ul {
             padding-left: 0px;
             display: flex;
         }
-
+        
         li {
             list-style: none;
             padding: 0px 5px 0px 17px;
@@ -161,21 +149,21 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #selected {
             font-weight: bold;
         }
-
+        
         #emptySpace {
             height: 100px;
         }
-
+        
         #menuHeader {
             background-color: white;
             position: fixed;
             width: max-content;
         }
-
+        
         #menuOptions {
             position: fixed;
             overflow: hidden;
@@ -183,16 +171,16 @@
             width: 25%;
             background-color: white;
         }
-
+        
         #menuOptions:hover {
             overflow-y: scroll;
         }
-
+        
         #menuMainOptions>ul {
             padding-left: 10px;
             padding-right: 10px;
         }
-
+        
         #menuMainOptions>ul>li>a {
             text-decoration: none;
             font-size: 13px;
@@ -201,18 +189,17 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #menuMainOptions>ul>li>a:hover {
             color: black;
             text-decoration: underline;
         }
-
+        
         #menuExtraOptions>ul {
             padding-left: 10px;
             padding-right: 10px;
             font-weight: 70;
         }
-
         /* #menuExtraOptions>ul>li {
             padding-top: 40px;
         }
@@ -228,58 +215,50 @@
         ::-webkit-scrollbar-thumb {
             background: black;
         } */
-
-
         /*------------- Modal ---------------*/
-
-
         /*/// ---------------------Landing Page Carousel---------------------------*/
-
-
-       
+        
         .crousel-wrapper ul {
             width: 50%;
             margin: auto;
             /* border: 1px solid red; */
             /* text-align: center; */
         }
-        .crousel-wrapper>ul{
-                display: flex;
-                flex-wrap: nowrap;
+        
+        .crousel-wrapper>ul {
+            display: flex;
+            flex-wrap: nowrap;
         }
+        
         .crousel-wrapper>ul>li {
             display: inline-block;
             margin: 10px;
             margin-top: 100px;
         }
-
-
+        
         .crousel-wrapper>ul>li>a {
             text-decoration: none;
             color: rgb(0, 0, 0);
             color: grey;
-
         }
-
+        
         @media all and (min-width: 450px) and (max-width: 850px) {
-            .crousel-wrapper>ul{
+            .crousel-wrapper>ul {
                 margin-left: 0%;
                 display: flex;
                 flex-wrap: nowrap;
             }
         }
-
+        
         @media all and (min-width: 50px) and (max-width: 450px) {
-            .crousel-wrapper>ul{
-              margin-left: 0%;
-              display: flex;
-              flex-wrap: nowrap;
+            .crousel-wrapper>ul {
+                margin-left: 0%;
+                display: flex;
+                flex-wrap: nowrap;
             }
         }
-
         /* main page css start */
-
-
+        
         #container {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -290,54 +269,45 @@
             margin-top: 20px;
             /* padding-top: 15vh; */
         }
-
+        
         #box1 {
             display: flex;
             justify-content: space-between;
             /* width: 100%; */
         }
-
+        
         p {
             margin-top: 6px;
             font-size: small;
         }
-
+        
         img {
             display: block;
             width: 100%;
         }
-
+        
         @media all and (min-width: 450px) and (max-width: 850px) {
             #container {
                 grid-template-columns: repeat(4, 1fr);
                 grid-template-rows: repeat(6, auto);
                 margin: auto;
-                
             }
         }
-
+        
         @media all and (min-width: 50px) and (max-width: 450px) {
             #container {
                 grid-template-columns: repeat(3, 1fr);
                 grid-template-rows: repeat(8, auto);
-
             }
         }
-
         /* mani page css end */
-
-
-         
+        
         #main-container {
             width: 85%;
             margin: auto;
-
-
         }
-
-
         /* //added css for footer section  */
-
+        
         #container-bottom {
             display: flex;
             flex-direction: row;
@@ -347,9 +317,8 @@
             height: 600px;
             margin-top: 600px;
             color: gray;
-
         }
-
+        
         #container-bottom1 {
             display: flex;
             flex-direction: row;
@@ -357,44 +326,43 @@
             height: 150px;
             color: gray;
         }
-
+        
         #container-bottom2 {
             font-size: 10px;
             height: 250px;
             color: gray;
         }
-
+        
         .bottom-heading {
             font-size: 18px;
             font-weight: bold;
             line-height: 45px;
         }
-
+        
         .box>div:first-child {
             color: black;
         }
-        p{
+        
+        p {
             color: gray;
         }
-        li{
+        
+        li {
             color: grey;
         }
     </style>
 </head>
 
 <body>
-     <!-- // ---------------------Landing Page Carousel  End------------------------------>
-     <header>
+    <!-- // ---------------------Landing Page Carousel  End------------------------------>
+    <header>
         <div id="headerContents">
             <div id="headerLeft">
                 <div>
-                    <input type="image" name="menu"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU"
-                        id="menu" onclick="document.getElementById('menuModal').style.display='block'">
+                    <input type="image" name="menu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU" id="menu" onclick="document.getElementById('menuModal').style.display='block'">
                 </div>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo"
-                        id="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
                 </div>
 
             </div>
@@ -403,9 +371,9 @@
                     <a href="">SEARCH</a>
                 </div>
                 <div id="headerRightRight">
-                    <a href="login.html" id="logInOption">LOG IN</a>
+                    <a href="./login.html" id="logInOption">LOG IN</a>
                     <a href="" id="helpOption">HELP</a>
-                    <a href="cart-page.html">CART</a>
+                    <a href="./cart-page.html">CART</a>
                 </div>
             </div>
         </div>
@@ -549,8 +517,7 @@
         <div id="container-bottom1">
             <!-- start   -->
             <div>INDIA</div>
-            <div>ENGLISH
-                © ALL RIGHTS RESERVED</div>
+            <div>ENGLISH © ALL RIGHTS RESERVED</div>
 
 
             <!-- stop  -->
@@ -565,129 +532,110 @@
 
 
     <script>
-        var womansData = [
-            {   
+        var womansData = [{
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/3625/910/040/2/w/563/3625910040_1_1_1.jpg?ts=1649414620546",
                 name: "TIED LEATHER FLAT SANDALS",
                 price: "₹ 2,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/3606/910/030/2/w/563/3606910030_6_1_1.jpg?ts=1646323428285",
                 name: "FLAT STRAPPY SANDALS",
                 price: "₹ 2,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/2631/910/040/2/w/563/2631910040_2_1_1.jpg?ts=1649414612449",
                 name: "BUCKLED LEATHER FLAT SANDALS",
                 price: "₹ 5,990.00",
             },
-        
-        
-            {   
+
+
+            {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/1355/810/040/12/w/563/1355810040_1_1_1.jpg?ts=1649764298463",
                 name: "LEATHER BLOCK HEEL SANDALS",
                 price: "₹ 4,990.00",
-            },{   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/1215/910/078/2/w/563/1215910078_1_1_1.jpg?ts=1649411244397",
                 name: "BRAIDED HIGH HEEL MULES",
                 price: "₹ 4,990.00",
             },
-            
-            {   
+
+            {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/1802/910/098/2/w/563/1802910098_1_1_1.jpg?ts=1649411244839",
                 name: "FLAT PLAITED MULES",
                 price: "₹ 4,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/1507/910/009/2/w/563/1507910009_1_1_1.jpg?ts=1649411243557",
                 name: "WOVEN SLINGBACK BALLET FLATS",
                 price: "₹ 4,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/2532/910/040/12/w/563/2532910040_1_1_1.jpg?ts=1649420578050",
                 name: "EMBELLISHED FLAT SLINGBACK SHOES",
                 price: "₹ 5,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/2348/910/098/2/w/563/2348910098_1_1_1.jpg?ts=1649082496147",
                 name: "EMBELLISHED PLATFORM SANDALS",
                 price: "₹ 5,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/5347/910/001/2/w/563/5347910001_6_1_1.jpg?ts=1648812666145",
                 name: "LEATHER TRAINERS",
                 price: "₹ 4,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/5301/810/001/2/w/563/5301810001_6_1_1.jpg?ts=1649781426547",
                 name: "TRAINERS",
                 price: "₹ 2,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/5300/810/202/2/w/563/5300810202_6_1_1.jpg?ts=1649781549157",
                 name: "TRAINERS",
                 price: "₹ 2,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/2804/910/040/2/w/563/2804910040_6_1_1.jpg?ts=1643044582794",
                 name: "FLAT SANDALS",
                 price: "₹ 4,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/3607/710/087/2/w/563/3607710087_1_1_1.jpg?ts=1646240935877",
                 name: "FLAT SANDALS WITH METAL CHAIN DETAIL",
                 price: "₹ 2,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/2230/910/060/2/w/563/2230910060_1_1_1.jpg?ts=1646745690240",
                 name: "HEELED SLINGBACK SHOES WITH EMBELLISHED BOW",
                 price: "₹ 5,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/2228/910/009/2/w/563/2228910009_1_1_1.jpg?ts=1646745690007",
                 name: "HEELED SLINGBACK SHOES WITH EMBELLISHED BOW",
                 price: "₹ 5,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/2228/910/060/3/w/563/2228910060_1_1_1.jpg?ts=1647001732675",
                 name: "HEELED SLINGBACK SHOES WITH EMBELLISHED BOW",
                 price: "₹ 5,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/5108/910/202/2/w/563/5108910202_1_1_1.jpg?ts=1646309081470",
                 name: "SOFT TRAINERS",
                 price: "₹ 3,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/5112/910/001/2/w/563/5112910001_6_1_1.jpg?ts=1646219870046",
                 name: "CHUNKY SOLE TRAINERS",
                 price: "₹ 4,590.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/3329/910/030/2/w/563/3329910030_6_1_1.jpg?ts=1643099135389",
                 name: "VINYL SANDALS WITH METHACRYLATE HEELS",
                 price: "₹ 2,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2022/V/1/1/p/3329/910/098/2/w/563/3329910098_6_1_1.jpg?ts=1643044372807",
                 name: "VINYL SANDALS WITH METHACRYLATE HEELS",
                 price: "₹ 2,990.00",
-            },
-            {   
+            }, {
                 image_url: "https://static.zara.net/photos///2021/I/1/1/p/1327/810/050/2/w/563/1327810050_1_1_1.jpg?ts=1621425042166",
                 name: "LEATHER HEELED SANDALS WITH JUTE INSOLE",
                 price: "₹ 4,990.00",
             },
-        
+
         ]
-        womansData.forEach(function (womanData) {
+        womansData.forEach(function(womanData) {
             var container = document.createElement('div');
 
             var img = document.createElement('img');
-            img.src = womanData.image_url;          
-            
-            let a=document.createElement('a');
-            a.setAttribute('href','./product-details.html');
+            img.src = womanData.image_url;
+
+            let a = document.createElement('a');
+            a.setAttribute('href', './product-details.html');
             a.setAttribute('target', '_blank');
             a.append(img);
 
@@ -696,18 +644,17 @@
 
             var name = document.createElement('p');
             name.textContent = womanData.name;
-            
+
 
             var price = document.createElement('p');
             price.innerText = womanData.price;
-           
+
             box1.append(name, price);
             container.append(a, box1);
             document.querySelector('#container').append(container);
         });
-
     </script>
-    <script src="homePage.js"></script>
+    <script src="./homePage.js"></script>
 </body>
 
 </html>

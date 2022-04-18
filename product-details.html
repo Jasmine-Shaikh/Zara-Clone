@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZARA India | New Collection Online</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    
-    <style>
-      
-       *{
-        font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
-        font-stretch: ultra-condensed;
-       }
-  
-        /*-------------------- Header ------------------------- */
 
+    <style>
+        * {
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+        /*-------------------- Header ------------------------- */
+        
         header {
             width: 100%;
             padding: 12px 24px 20px 24px;
             position: fixed;
             margin: 0px;
         }
-
+        
         #headerContents {
             display: flex;
             justify-content: space-between;
             width: 100%;
         }
-
+        
         #headerLeft {
             display: flex;
         }
-
+        
         #headerRight {
             width: 30%;
             display: flex;
@@ -40,7 +39,7 @@
             padding: 10px;
             justify-content: space-between;
         }
-
+        
         #headerRightLeft>a {
             padding: 0% 60% 0% 0%;
             font-size: 13px;
@@ -51,12 +50,12 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #headerRightRight {
             display: flex;
             width: fit-content;
         }
-
+        
         #headerRightRight>a {
             text-decoration: none;
             padding: 0px 10px 0px 10px;
@@ -66,88 +65,78 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #menu {
             width: 35px;
             height: 35px;
             margin-right: 30px;
         }
-
+        
         #logo {
             width: 212px;
         }
-
+        
         @media only screen and (max-width: 760px) {
             #helpOption {
                 display: none;
             }
-
             #headerRight {
                 width: 10%;
                 display: flex;
                 flex-direction: column-reverse;
             }
-
             #logInOption {
                 display: none;
             }
-
             #headerRightLeft>a {
                 padding: 0px;
             }
-
             #logo {
                 width: 170px;
             }
         }
-
-
         /*-------------------- Header End------------------------- */
-
-
         /*------------- Modal ---------------*/
-
+        
         .menuOpacity {
             animation: opac 0.8s
         }
-
+        
         @keyframes opac {
             from {
                 opacity: 0
             }
-
             to {
                 opacity: 1
             }
         }
-
+        
         .animatedMenuShow {
             animation: show 0.8s;
             animation-fill-mode: forwards;
         }
-
+        
         @keyframes show {
             0% {
                 opacity: 1
             }
-
             100% {
                 opacity: 0
             }
         }
-
+        
         #menuModal {
             display: none;
             position: fixed;
             z-index: 1;
             padding-top: 100px;
         }
-
+        
         #menuTop>ul {
             padding-left: 0px;
             display: flex;
         }
-
+        
         li {
             list-style: none;
             padding: 0px 5px 0px 17px;
@@ -157,21 +146,21 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #selected {
             font-weight: bold;
         }
-
+        
         #emptySpace {
             height: 100px;
         }
-
+        
         #menuHeader {
             background-color: white;
             position: fixed;
             width: max-content;
         }
-
+        
         #menuOptions {
             position: fixed;
             overflow: hidden;
@@ -179,16 +168,16 @@
             width: 25%;
             background-color: white;
         }
-/* 
+        /* 
         #menuOptions:hover {
             overflow-y: scroll;
         } */
-
+        
         #menuMainOptions>ul {
             padding-left: 10px;
             padding-right: 10px;
         }
-
+        
         #menuMainOptions>ul>li>a {
             text-decoration: none;
             font-size: 13px;
@@ -197,40 +186,37 @@
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-
+        
         #menuMainOptions>ul>li>a:hover {
             color: black;
             text-decoration: underline;
         }
-
+        
         #menuExtraOptions>ul {
             padding-left: 10px;
             padding-right: 10px;
             font-weight: 70;
         }
-
+        
         #menuExtraOptions>ul>li {
             padding-top: 40px;
         }
-
-        ::-webkit-scrollbar {
+        
+         ::-webkit-scrollbar {
             width: 1px;
         }
-
-        ::-webkit-scrollbar-track {
+        
+         ::-webkit-scrollbar-track {
             background: #a5a5a5;
         }
-
-        ::-webkit-scrollbar-thumb {
+        
+         ::-webkit-scrollbar-thumb {
             background: black;
         }
-
-
         /*------------- Modal ---------------*/
-
-
         /*/// ---------------------Landing Page Carousel---------------------------*/
-        #container{
+        
+        #container {
             display: flex;
             flex-wrap: wrap;
             height: auto;
@@ -238,99 +224,108 @@
             /* border: 2px solid red; */
             margin: auto;
         }
-        #box{
+        
+        #box {
             height: auto;
             width: 32%;
             /* border: 2px solid green; */
             margin: auto;
         }
-        p{
+        
+        p {
             font-size: small;
             font-size: 10px;
             color: grey;
             line-height: 17px;
         }
-       
-        #sub-box-1{
+        
+        #sub-box-1 {
             width: 50%;
             padding-top: 195px;
         }
-        #sub-box-2{
-             margin-top: 50px;
-             height: 80%;
-            
+        
+        #sub-box-2 {
+            margin-top: 50px;
+            height: 80%;
         }
-        .product{
+        
+        .product {
             display: flex;
             padding-top: 50px;
-            
-           
         }
-        .product-small-img{
+        
+        .product-small-img {
             display: grid;
             gap: 1px;
-
         }
-        .product-small-img img{
-            height: 80px;
+        
+        .product-small-img img {
+            height: 60px;
         }
-        .img-container{
+        
+        .img-container {
             width: 80%;
         }
-        .img-container img{
-            height: 600px;
-            width: 95%; 
+        
+        .img-container img {
+            width: 95%;
         }
-       
-        #sub-box-3{
+        
+        #sub-box-3 {
             width: 60%;
             padding-top: 65px;
             margin: auto;
             margin-top: 195px;
         }
-        button{
-            padding: 10px 87px;
+        
+        button {
+            padding: 10px;
+            width: 100%;
             text-align: center;
             background-color: black;
             color: white;
             border: none;
         }
-        #sub-box{
+        
+        #sub-box {
             display: flex;
             justify-content: space-between;
         }
-        #price{
+        
+        #price {
             margin-bottom: 35px;
         }
-        .ulList{
+        
+        .ulList {
+            display: flex;
             list-style: none;
         }
+        
         @media all and (min-width: 450px) and (max-width: 850px) {
             #box {
                 width: 50%;
             }
-            #container{
+            #container {
                 height: auto;
             }
         }
-
+        
         @media all and (min-width: 50px) and (max-width: 450px) {
             #box {
                 width: 100%;
             }
-            #container{
+            #container {
                 height: auto;
             }
-        } 
-
-         /* //added css for footer section  */
-         #main-container{
+        }
+        /* //added css for footer section  */
+        
+        #main-container {
             width: 85%;
             margin: auto;
-        
-
         }
-         #container-bottom{
+        
+        #container-bottom {
             display: flex;
             flex-direction: row;
             gap: 30px;
@@ -339,50 +334,48 @@
             height: 600px;
             margin-top: 600px;
             color: gray;
-
         }
-        #container-bottom1{
+        
+        #container-bottom1 {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             height: 150px;
             color: gray;
         }
-        #container-bottom2{
+        
+        #container-bottom2 {
             font-size: 10px;
             height: 250px;
             color: gray;
         }
-
-        .bottom-heading{
+        
+        .bottom-heading {
             font-size: 18px;
             font-weight: bold;
             line-height: 45px;
         }
-        .box>div:first-child{
+        
+        .box>div:first-child {
             color: black;
         }
-
-
-        body{
+        
+        body {
             overflow-y: inherit;
         }
-       
     </style>
 </head>
+
 <body>
-       <!-- // ---------------------Landing Page Carousel  End------------------------------>
+    <!-- // ---------------------Landing Page Carousel  End------------------------------>
     <header>
         <div id="headerContents">
             <div id="headerLeft">
                 <div>
-                    <input type="image" name="menu"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU"
-                        id="menu" onclick="document.getElementById('menuModal').style.display='block'">
+                    <input type="image" name="menu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU" id="menu" onclick="document.getElementById('menuModal').style.display='block'">
                 </div>
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo"
-                        id="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
                 </div>
 
             </div>
@@ -393,7 +386,7 @@
                 <div id="headerRightRight">
                     <a href="" id="logInOption">LOG IN</a>
                     <a href="" id="helpOption">HELP</a>
-                    <a href="">CART</a>
+                    <a href="./cart-page.html">CART</a>
                 </div>
             </div>
         </div>
@@ -458,134 +451,140 @@
     <!-- Modal End -->
     <div id="container">
         <div id="box">
-           <div id="sub-box-1">
-            <h4>MATERIALS, CARE AND ORIGIN</h4>
-            <h3>JOIN LIFE</h3>
-            <p>Care for water: produced using less water.</p>
-            <p>We use the Join Life label on clothing that is produced using technology and raw materials that help us to reduce the environmental impact of our products. </p>
-            <h4>MATERIALS</h4>
-            <p>We work with monitoring programmes to ensure compliance with safety, health and quality standards for our products. </p>
-            <p>The Green to Wear 2.0 standard aims to minimise the environmental impact of textile manufacturing. To that end, we have developed Inditex’s The List programme, which helps guarantee both that production processes are clean and that our garments are safe and healthy. </p>
-           </div>
-           
+            <div id="sub-box-1">
+                <h4>MATERIALS, CARE AND ORIGIN</h4>
+                <h3>JOIN LIFE</h3>
+                <p>Care for water: produced using less water.</p>
+                <p>We use the Join Life label on clothing that is produced using technology and raw materials that help us to reduce the environmental impact of our products. </p>
+                <h4>MATERIALS</h4>
+                <p>We work with monitoring programmes to ensure compliance with safety, health and quality standards for our products. </p>
+                <p>The Green to Wear 2.0 standard aims to minimise the environmental impact of textile manufacturing. To that end, we have developed Inditex’s The List programme, which helps guarantee both that production processes are clean and that our
+                    garments are safe and healthy. </p>
+            </div>
+
         </div>
         <div id="box">
             <div id="sub-box-2">
-            <div class="product">
-                <div class="img-container">
-                 <img id="imageBox" src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/444/2335159941_2_2_1.jpg?ts=1649342414634">
+                <div class="product">
+                    <div class="img-container">
+                        <img id="imageBox" src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/444/2335159941_2_2_1.jpg?ts=1649342414634">
+                    </div>
+                    <div class="product-small-img">
+                        <!-- <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/444/2335159941_2_2_1.jpg?ts=1649342414634" onClick="myFunction(this)" > -->
+                        <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_2_1.jpg?ts=1649342414634" onClick="myFunction(this)">
+                        <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_1_1.jpg?ts=1649342406399" onClick="myFunction(this)">
+                        <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_3_1.jpg?ts=1649342406351" onClick="myFunction(this)">
+                        <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_4_1.jpg?ts=1649342422860" onClick="myFunction(this)">
+                        <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_5_1.jpg?ts=1649342428612" onClick="myFunction(this)">
+                        <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_6_1_1.jpg?ts=1649322981367" onClick="myFunction(this)">
+                        <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_6_3_1.jpg?ts=1649323009551" onClick="myFunction(this)">
+                    </div>
                 </div>
-                <div class="product-small-img">
-                    <!-- <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/444/2335159941_2_2_1.jpg?ts=1649342414634" onClick="myFunction(this)" > -->
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_2_1.jpg?ts=1649342414634" onClick="myFunction(this)">
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_1_1.jpg?ts=1649342406399" onClick="myFunction(this)" >
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_3_1.jpg?ts=1649342406351" onClick="myFunction(this)" >
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_4_1.jpg?ts=1649342422860" onClick="myFunction(this)">
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_2_5_1.jpg?ts=1649342428612" onClick="myFunction(this)" >
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_6_1_1.jpg?ts=1649322981367" onClick="myFunction(this)" >
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/750/2335159941_6_3_1.jpg?ts=1649323009551" onClick="myFunction(this)" >
-                </div>
-             </div>
             </div>
         </div>
         <div id="box">
             <div id="sub-box-3">
                 <h3>CROPPED T-SHIRT</h3>
-            <p>Cropped short sleeve T-shirt with a round neckline.</p>
-            <p>VIOLET | 4424/159</p>
-            <p>₹ 590.00</p>
-            <p  id="price">MRP incl. of all taxes</p>
-            <hr>
-           
-            <ul class="ulList">
-                <!-- <li>XS</li>
-                <li>S</li> -->
-                <li>M</li>
-                <!-- <li>L</li>
-                <li>XL</li> -->
-            </ul>
-            <hr>
-            <div id="sub-box">
-                <p>FIND YOUR SIZE</p>
-                <p>SIZE GUIDE</p>
-            </div>
-            <button> ADD TO BAG</button>
-            <p>CHECK IN-STORE AVAILABILITY</p>
-            <p>DELIVERY, EXCHANGES AND RETURNS</p>
+                <p>Cropped short sleeve T-shirt with a round neckline.</p>
+                <p>VIOLET | 4424/159</p>
+                <p>₹ 590.00</p>
+                <p id="price">MRP incl. of all taxes</p>
+                <hr>
+
+                <ul class="ulList">
+                    <li>XS</li>
+                    <li>S</li>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                </ul>
+                <hr>
+                <div id="sub-box">
+                    <p>FIND YOUR SIZE</p>
+                    <p>SIZE GUIDE</p>
+                </div>
+                <button onclick="addToCart()"> ADD TO BAG</button>
+                <p>CHECK IN-STORE AVAILABILITY</p>
+                <p>DELIVERY, EXCHANGES AND RETURNS</p>
             </div>
         </div>
     </div>
 
 
-     <!-- // add footer common section  -->
-     <div id="main-container">
+    <!-- // add footer common section  -->
+    <div id="main-container">
         <div id="container-bottom">
-           <!-- START  -->
-           <div class="box">
-                   <div class="bottom-heading">HELP</div>
-                   <div>SHOP AT ZARA.COM</div>
-                   <div>PRODUCT</div>
-                   <div>PAYMENT</div>
-                   <div>SHIPPING</div>
-                   <div>EXCHANGES AND RETURNS</div>
-                   <div>SHOPS AND COMPANY</div>
-                   <div>CLOTHES COLLECTION</div>
-                   <div>PROGRAMME</div>
-                   <div>MY ACCOUNT</div>
-           </div>
-   
-           <div class="box">
-               <div class="bottom-heading">FOLLOW US</div>
-               <div>NEWSLETTER</div>
-               <div>INSTAGRAM</div>
-               <div>FACEBOOK</div>
-               <div>TWITTER</div>
-               <div>PINTEREST</div>
-               <div>YOUTUBE</div>               
-           </div>
-   
-           <div class="box">
-               <div class="bottom-heading">COMPANY</div>
-               <div>ABOUT US</div>
-               <div>JOIN LIFE</div>
-               <div>OFFICES</div>
-               <div>STORES</div>
-               <div>WORK WITH US</div>                              
-           </div>
-   
-           <div class="box">
-               <div class="bottom-heading">POLICIES</div>
-               <div>PRIVACY POLICY</div>
-               <div>PURCHASE CONDITIONS</div>
-               <div>COOKIES SETTINGS</div>                                             
-           </div>
-   
-   
-       <!-- STOP  -->
-       </div>
-   
-       <div id="container-bottom1">
-           <!-- start   -->
-           <div>INDIA</div>
-           <div>ENGLISH
-               © ALL RIGHTS RESERVED</div>
-   
-   
-           <!-- stop  -->
-       </div>
-   
-       <div id="container-bottom2">
-           <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
-           <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
-           <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
-       </div>
-   </div>
-      
+            <!-- START  -->
+            <div class="box">
+                <div class="bottom-heading">HELP</div>
+                <div>SHOP AT ZARA.COM</div>
+                <div>PRODUCT</div>
+                <div>PAYMENT</div>
+                <div>SHIPPING</div>
+                <div>EXCHANGES AND RETURNS</div>
+                <div>SHOPS AND COMPANY</div>
+                <div>CLOTHES COLLECTION</div>
+                <div>PROGRAMME</div>
+                <div>MY ACCOUNT</div>
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">FOLLOW US</div>
+                <div>NEWSLETTER</div>
+                <div>INSTAGRAM</div>
+                <div>FACEBOOK</div>
+                <div>TWITTER</div>
+                <div>PINTEREST</div>
+                <div>YOUTUBE</div>
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">COMPANY</div>
+                <div>ABOUT US</div>
+                <div>JOIN LIFE</div>
+                <div>OFFICES</div>
+                <div>STORES</div>
+                <div>WORK WITH US</div>
+            </div>
+
+            <div class="box">
+                <div class="bottom-heading">POLICIES</div>
+                <div>PRIVACY POLICY</div>
+                <div>PURCHASE CONDITIONS</div>
+                <div>COOKIES SETTINGS</div>
+            </div>
+
+
+            <!-- STOP  -->
+        </div>
+
+        <div id="container-bottom1">
+            <!-- start   -->
+            <div>INDIA</div>
+            <div>ENGLISH © ALL RIGHTS RESERVED</div>
+
+
+            <!-- stop  -->
+        </div>
+
+        <div id="container-bottom2">
+            <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+            <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+            <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+        </div>
+    </div>
+
     <script>
-        function myFunction(smallImg){
+        function myFunction(smallImg) {
             var fullImg = document.getElementById('imageBox');
             fullImg.src = smallImg.src;
         }
+
+        function addToCart() {
+            alert("Product added to Cart successfully!")
+        }
     </script>
+    <script src="./homePage.js"></script>
 </body>
+
 </html>
