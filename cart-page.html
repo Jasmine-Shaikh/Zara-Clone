@@ -17,6 +17,7 @@
         #main-container {
             width: 85%;
             margin: auto;
+            margin-top: 50px;
             /* padding-top: 10%; */
         }
         
@@ -79,6 +80,10 @@
         
         #product-details {
             height: 900px;
+        }
+        
+        #product-details {
+            color: gray;
         }
         
         .box>div:first-child {
@@ -157,7 +162,14 @@
         #product-container {
             display: flex;
             gap: 20px;
-            color: rgb(47, 46, 46);
+            color: gray;
+            width: 100%;
+            margin: auto;
+            margin-bottom: 300px;
+        }
+        
+        #productNamePara {
+            margin-top: 70px;
         }
         
         #inc-dec-btn {
@@ -166,10 +178,40 @@
             align-items: center;
         }
         
+        #left-side {
+            width: 27%;
+            /* border: 2px solid; */
+        }
+        
+        #left-side-1 {
+            width: 100%;
+            /* border: 2px solid red; */
+        }
+        
         #right-side {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+        }
+        
+        @media all and (min-width: 450px) and (max-width: 850px) {
+            #left-side-1 {
+                width: 100%;
+                height: 100%;
+            }
+            #left-side {
+                width: 50%;
+            }
+        }
+        
+        @media all and (min-width: 50px) and (max-width: 450px) {
+            #left-side-1 {
+                width: 100%;
+                height: 100%;
+            }
+            #left-side {
+                width: 100%;
+            }
         }
         
         #inc-btn,
@@ -189,36 +231,32 @@
                 margin-top: 20%;
             }
         }
-        
-        @media all and (min-width: 88px) and (max-width: 450px) {
-            #cartNavBar {
-                display: flex;
-                flex-direction: row;
-                gap: 10px;
-                margin-top: 35%;
-            }
-            #continue {
-                display: flex;
-                position: fixed;
-                bottom: 15px;
-                right: 10px;
-            }
-            #total-pirce-div {
-                display: flex;
-                flex-direction: column;
-                height: 40px;
-                justify-content: center;
-                margin-right: 40px;
-            }
-            #continue-button {
-                background-color: black;
-                color: white;
-                padding-left: 70px;
-                padding-right: 70px;
-                height: 40px;
-            }
-        }
     </style>
+
+    <body>
+        <!-- add heading part inside  -->
+
+        } @media all and (min-width: 88px) and (max-width: 450px) { #cartNavBar { display: flex; flex-direction: row; gap: 10px; margin-top: 35%; }
+
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+        </div>
+
+        #continue { display: flex; position: fixed; bottom: 15px; right: 10px; } #total-pirce-div { display: flex; flex-direction: column; height: 40px; justify-content: center; margin-right: 40px; } #continue-button { background-color: black; color: white; padding-left:
+        70px; padding-right: 70px; height: 40px; }
+
+        <div id="headerRightRight">
+
+            <a id="help" href="">HELP</a>
+
+        </div>
+        </div>
+        </div>
+        </header>
+        <!-- end header section html  -->
+
+        }
+        </style>
 </head>
 
 <body>
@@ -262,17 +300,17 @@
             <!-- show dynamicaly product details added in cart  -->
             <!-- // dummy code  -->
             <!-- // design cart product shopw  -->
-            <p>BLOUSE WITH CONTRAST EMBROIDERY</p>
+            <p id="productNamePara">CROPPED T-SHIRT</p>
             <div id="product-container">
 
-                <div>
-                    <img src="https://static.zara.net/photos///2022/V/0/1/p/7521/031/940/2/w/353/7521031940_1_1_1.jpg?ts=1647433483020" alt="">
+                <div id="left-side">
+                    <img id="left-side-1" src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/378/2335159941_1_1_1.jpg?ts=1649342411033" alt="Unable to display image">
                 </div>
                 <div id="right-side">
                     <div>
                         <p>REF. | 7521/031</p>
                         <P>DARK FUCHSIA</P>
-                        <P>S</P>
+                        <P>M</P>
                         <div id="inc-dec-btn">
                             <button id="dec-btn">-</button>
                             <p id="count">1</p>
@@ -280,7 +318,7 @@
                         </div>
                     </div>
                     <div>
-                        <p class="total-price">Rs. 500 /-</p>
+                        <p class="total-price">Rs. 590 /-</p>
                     </div>
                     <div>
                         <p>DELETE</p>
@@ -288,8 +326,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
 
 
@@ -359,7 +395,7 @@
         <!-- design fix continue button  -->
         <div id="continue">
             <div id="total-pirce-div">
-                <p class="total-price1">Total Price : Rs. 500/-</p>
+                <p class="total-price1">Total Price : Rs. 590/-</p>
 
 
             </div>
@@ -379,7 +415,7 @@
 </body>
 
 <script>
-    var iprice = 5000;
+    var iprice = 590;
     var count = 1;
     localStorage.setItem('totalPrice', iprice);
     localStorage.setItem('count', count);
