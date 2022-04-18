@@ -153,6 +153,8 @@
         
         #emptySpace {
             height: 100px;
+            width: 341.25px;
+            background-color: white;
         }
         
         #menuHeader {
@@ -165,13 +167,13 @@
             position: fixed;
             overflow: hidden;
             max-height: 380px;
-            width: 25%;
+            width: 341.25px;
             background-color: white;
         }
-        /* 
+        
         #menuOptions:hover {
             overflow-y: scroll;
-        } */
+        }
         
         #menuMainOptions>ul {
             padding-left: 10px;
@@ -234,7 +236,7 @@
         
         p {
             font-size: small;
-            font-size: 10px;
+            font-size: 13px;
             color: grey;
             line-height: 17px;
         }
@@ -251,7 +253,6 @@
         
         .product {
             display: flex;
-            padding-top: 50px;
         }
         
         .product-small-img {
@@ -272,10 +273,8 @@
         }
         
         #sub-box-3 {
-            width: 60%;
             padding-top: 65px;
-            margin: auto;
-            margin-top: 195px;
+            margin-left: 25%;
         }
         
         button {
@@ -298,7 +297,14 @@
         
         .ulList {
             display: flex;
+            flex-direction: column;
+            padding: 0px;
             list-style: none;
+        }
+        
+        .ulList>li {
+            padding-left: 3px;
+            padding-bottom: 4px;
         }
         
         @media all and (min-width: 450px) and (max-width: 850px) {
@@ -386,7 +392,7 @@
                 <div id="headerRightRight">
                     <a href="" id="logInOption">LOG IN</a>
                     <a href="" id="helpOption">HELP</a>
-                    <a href="./cart-page.html">CART</a>
+                    <a href="./cart-page.html" id="cartOption">CART (0)</a>
                 </div>
             </div>
         </div>
@@ -581,6 +587,7 @@
         }
 
         function addToCart() {
+            document.querySelector("#cartOption").innerText = "CART" + " (" + JSON.parse(localStorage.getItem("count")) + ")"
             alert("Product added to Cart successfully!")
         }
     </script>
