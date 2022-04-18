@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart - Zara India</title>
-    <link rel="icon" type="image/x-icon" href="./fav icon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
     <style>
-
-
-
-
-
-        *{
+        * {
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-        #main-container{
+        
+        #main-container {
             width: 85%;
             margin: auto;
             /* padding-top: 10%; */
         }
-
-        #cartNavBar{
+        
+        #cartNavBar {
             display: flex;
-            flex-direction: row; 
+            flex-direction: row;
             gap: 10px;
             margin-top: 10%;
         }
-        #cart-nav{
+        
+        #cart-nav {
             color: black;
             font-weight: bold;
             font-size: 22px;
         }
-        #wishlist-nav{
-            
+        
+        #wishlist-nav {
             font-size: 22px;
             font-weight: 200;
             color: gray;
-            
         }
-        #empty{
+        
+        #empty {
             text-align: center;
             margin-top: 50%;
             font-size: 11px;
             color: black;
             font-weight: bold;
         }
-
-        #container-bottom{
+        
+        #container-bottom {
             display: flex;
             flex-direction: row;
             gap: 30px;
@@ -57,231 +55,202 @@
             line-height: 25px;
             height: 300px;
             color: gray;
-
         }
-        #container-bottom1{
+        
+        #container-bottom1 {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             height: 150px;
             color: gray;
         }
-        #container-bottom2{
+        
+        #container-bottom2 {
             font-size: 10px;
             height: 250px;
             color: gray;
         }
-
-        .bottom-heading{
+        
+        .bottom-heading {
             font-size: 18px;
             font-weight: bold;
             line-height: 45px;
         }
-
-        #product-details{
+        
+        #product-details {
             height: 900px;
         }
-        .box>div:first-child{
+        
+        .box>div:first-child {
             color: black;
         }
-
         /* //FIX button css code  */
-        #continue{
+        
+        #continue {
             display: flex;
             position: fixed;
             bottom: 25px;
-            right: 15px; 
-            
-            
+            right: 15px;
         }
-        #total-pirce-div{
+        
+        #total-pirce-div {
             display: flex;
             flex-direction: column;
-            height: 40px;     
+            height: 40px;
             justify-content: center;
             margin-right: 60px;
         }
-        #continue-button{
+        
+        #continue-button {
             background-color: black;
             color: white;
             padding-left: 90px;
             padding-right: 90px;
             height: 40px;
-            
         }
-
-            /* //FIX button css code  */
-
-            /*-------------------- Header ------------------------- */
- 
-            #headerContents {
-     display: flex;
-     justify-content: space-between;
-     width: 92%;
-     margin: auto;
-     margin-right: 10px;
-    margin-top: 15px;
-    
-    top: 0px;
-    
- }
- 
-
-
- 
- #headerRight {
-     width: max-content;
-     display: flex;
-     
-     padding: 10px;
-     justify-content: space-between;  
-      
- }
- 
-
- 
- #headerRightRight {
-     display: flex;
-     
-    
- }
- #help{
-    position: fixed;
-    right: 7.5%;
- }
- 
- #headerRightRight>a {
-     text-decoration: none;
-     padding: 0px 10px 0px 10px;
-     font-size: 13px;
-     color: rgb(41, 41, 41);
-     font-weight: 100;
-     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
-     font-stretch: ultra-condensed;
-    
-     
- }
- 
-
- #logo {
-     width: 212px;
-     position: fixed;
- }
- /*-------------------- Header End------------------------- */
-
-
- /* // css for show cart product  */
-        #product-container{
+        /* //FIX button css code  */
+        /*-------------------- Header ------------------------- */
+        
+        #headerContents {
+            display: flex;
+            justify-content: space-between;
+            width: 92%;
+            margin: auto;
+            margin-right: 10px;
+            margin-top: 15px;
+            top: 0px;
+        }
+        
+        #headerRight {
+            width: max-content;
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        
+        #headerRightRight {
+            display: flex;
+        }
+        
+        #help {
+            position: fixed;
+            right: 7.5%;
+        }
+        
+        #headerRightRight>a {
+            text-decoration: none;
+            padding: 0px 10px 0px 10px;
+            font-size: 13px;
+            color: rgb(41, 41, 41);
+            font-weight: 100;
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+        
+        #logo {
+            width: 212px;
+            position: fixed;
+        }
+        /*-------------------- Header End------------------------- */
+        /* // css for show cart product  */
+        
+        #product-container {
             display: flex;
             gap: 20px;
             color: rgb(47, 46, 46);
         }
-        #inc-dec-btn{
+        
+        #inc-dec-btn {
             display: flex;
             flex-direction: row;
             align-items: center;
         }
-        #right-side{
+        
+        #right-side {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        #inc-btn,#dec-btn{
+        
+        #inc-btn,
+        #dec-btn {
             background-color: transparent;
             border: 0px;
             padding: 20px;
             font-size: 25px;
         }
-
-
         /* Use media query  */
-
+        
         @media all and (min-width: 451px) and (max-width: 1050px) {
-            #cartNavBar{
-            display: flex;
-            flex-direction: row; 
-            gap: 10px;
-            margin-top: 20%;
+            #cartNavBar {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 20%;
+            }
         }
-
-     
-            
-      
-      }
-      
-      @media all and (min-width: 88px) and (max-width: 450px) {
-            #cartNavBar{
-            display: flex;
-            flex-direction: row; 
-            gap: 10px;
-            margin-top: 35%;
+        
+        @media all and (min-width: 88px) and (max-width: 450px) {
+            #cartNavBar {
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                margin-top: 35%;
+            }
+            #continue {
+                display: flex;
+                position: fixed;
+                bottom: 15px;
+                right: 10px;
+            }
+            #total-pirce-div {
+                display: flex;
+                flex-direction: column;
+                height: 40px;
+                justify-content: center;
+                margin-right: 40px;
+            }
+            #continue-button {
+                background-color: black;
+                color: white;
+                padding-left: 70px;
+                padding-right: 70px;
+                height: 40px;
+            }
         }
-
-
-        #continue{
-            display: flex;
-            position: fixed;
-            bottom: 15px;
-            right: 10px; 
-            
-            
-        }
-        #total-pirce-div{
-            display: flex;
-            flex-direction: column;
-            height: 40px;     
-            justify-content: center;
-            margin-right: 40px;
-        }
-        #continue-button{
-            background-color: black;
-            color: white;
-            padding-left: 70px;
-            padding-right: 70px;
-            height: 40px;
-            
-        }
-            
-      
-      }
-
-
-
-      
-
-
     </style>
 </head>
+
 <body>
     <!-- add heading part inside  -->
-    
-                    <!-- header section html  -->
-                    
-                     <header>
-                        <div id="headerContents">
-                            <div id="headerLeft">
-                              
-                                <div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
-                                </div>
-                
-                            </div>
-                           
-                                <div id="headerRightRight">
-                                    
-                                    <a id="help" href="">HELP</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                <!-- end header section html  -->
+
+    <!-- header section html  -->
+
+    <header>
+        <div id="headerContents">
+            <div id="headerLeft">
+
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+                </div>
+
+            </div>
+
+            <div id="headerRightRight">
+
+                <a id="help" href="">HELP</a>
+
+            </div>
+        </div>
+        </div>
+    </header>
+    <!-- end header section html  -->
 
 
-    
+
     <div id="main-container">
         <div>
-             
+
         </div>
         <div id="cartNavBar">
             <div id="cart-nav">CART</div>
@@ -292,54 +261,54 @@
         <div id="product-details">
             <!-- show dynamicaly product details added in cart  -->
             <!-- // dummy code  -->
-             <!-- // design cart product shopw  -->
-    <p>BLOUSE WITH CONTRAST EMBROIDERY</p>
-    <div id="product-container">
-        
-        <div>
-            <img src="https://static.zara.net/photos///2022/V/0/1/p/7521/031/940/2/w/353/7521031940_1_1_1.jpg?ts=1647433483020" alt="">
-        </div>
-        <div  id="right-side">
-            <div>
-                <p>REF. | 7521/031</p>
-            <P>DARK FUCHSIA</P>
-            <P>S</P>
-            <div id="inc-dec-btn">
-                <button id="dec-btn">-</button>
-                <p id="count">1</p>
-                <button id="inc-btn">+</button>
+            <!-- // design cart product shopw  -->
+            <p>BLOUSE WITH CONTRAST EMBROIDERY</p>
+            <div id="product-container">
+
+                <div>
+                    <img src="https://static.zara.net/photos///2022/V/0/1/p/7521/031/940/2/w/353/7521031940_1_1_1.jpg?ts=1647433483020" alt="">
+                </div>
+                <div id="right-side">
+                    <div>
+                        <p>REF. | 7521/031</p>
+                        <P>DARK FUCHSIA</P>
+                        <P>S</P>
+                        <div id="inc-dec-btn">
+                            <button id="dec-btn">-</button>
+                            <p id="count">1</p>
+                            <button id="inc-btn">+</button>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="total-price">Rs. 500 /-</p>
+                    </div>
+                    <div>
+                        <p>DELETE</p>
+                        <P>SAVE FOR LATER</P>
+                    </div>
+                </div>
             </div>
-            </div>
-            <div>
-                <p class="total-price">Rs. 500 /-</p>
-            </div>
-            <div>
-                <p>DELETE</p>
-                <P>SAVE FOR LATER</P>
-            </div>
-        </div>
-    </div>
 
 
         </div>
 
-        
+
 
         <!-- Design Bottom view  -->
 
         <div id="container-bottom">
             <!-- START  -->
             <div class="box">
-                    <div class="bottom-heading">HELP</div>
-                    <div>SHOP AT ZARA.COM</div>
-                    <div>PRODUCT</div>
-                    <div>PAYMENT</div>
-                    <div>SHIPPING</div>
-                    <div>EXCHANGES AND RETURNS</div>
-                    <div>SHOPS AND COMPANY</div>
-                    <div>CLOTHES COLLECTION</div>
-                    <div>PROGRAMME</div>
-                    <div>MY ACCOUNT</div>
+                <div class="bottom-heading">HELP</div>
+                <div>SHOP AT ZARA.COM</div>
+                <div>PRODUCT</div>
+                <div>PAYMENT</div>
+                <div>SHIPPING</div>
+                <div>EXCHANGES AND RETURNS</div>
+                <div>SHOPS AND COMPANY</div>
+                <div>CLOTHES COLLECTION</div>
+                <div>PROGRAMME</div>
+                <div>MY ACCOUNT</div>
             </div>
 
             <div class="box">
@@ -349,7 +318,7 @@
                 <div>FACEBOOK</div>
                 <div>TWITTER</div>
                 <div>PINTEREST</div>
-                <div>YOUTUBE</div>               
+                <div>YOUTUBE</div>
             </div>
 
             <div class="box">
@@ -358,25 +327,24 @@
                 <div>JOIN LIFE</div>
                 <div>OFFICES</div>
                 <div>STORES</div>
-                <div>WORK WITH US</div>                              
+                <div>WORK WITH US</div>
             </div>
 
             <div class="box">
                 <div class="bottom-heading">POLICIES</div>
                 <div>PRIVACY POLICY</div>
                 <div>PURCHASE CONDITIONS</div>
-                <div>COOKIES SETTINGS</div>                                             
+                <div>COOKIES SETTINGS</div>
             </div>
 
 
-        <!-- STOP  -->
+            <!-- STOP  -->
         </div>
 
         <div id="container-bottom1">
             <!-- start   -->
             <div>INDIA</div>
-            <div>ENGLISH
-                © ALL RIGHTS RESERVED</div>
+            <div>ENGLISH © ALL RIGHTS RESERVED</div>
 
 
             <!-- stop  -->
@@ -388,14 +356,14 @@
             <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
         </div>
 
-         <!-- design fix continue button  -->
-         <div id="continue">
+        <!-- design fix continue button  -->
+        <div id="continue">
             <div id="total-pirce-div">
                 <p class="total-price1">Total Price : Rs. 500/-</p>
-                
+
 
             </div>
-            
+
             <a href="./choose-payment.html">
                 <button id="continue-button">
                     CONTINUE
@@ -407,47 +375,45 @@
 
         <!-- container stop  -->
     </div>
-    
+
 </body>
 
 <script>
-    var iprice=5000;
-    var count=1;
-    localStorage.setItem('totalPrice',iprice);
-    localStorage.setItem('count',count);
-   
-    document.querySelector('.total-price1').innerText=`Total Price : Rs. ${iprice}/- `;
-    document.querySelector('.total-price').innerText=`Rs. ${iprice}/- `;
-    document.querySelector('#count').innerText=`${count} `;
+    var iprice = 5000;
+    var count = 1;
+    localStorage.setItem('totalPrice', iprice);
+    localStorage.setItem('count', count);
+
+    document.querySelector('.total-price1').innerText = `Total Price : Rs. ${iprice}/- `;
+    document.querySelector('.total-price').innerText = `Rs. ${iprice}/- `;
+    document.querySelector('#count').innerText = `${count} `;
 
 
-    document.querySelector('#inc-btn').addEventListener('click',function(){
+    document.querySelector('#inc-btn').addEventListener('click', function() {
         count++;
-        localStorage.setItem('count',count);
-        document.querySelector('#count').innerText=`${count} `
-        var finalPrice=iprice*count;
-        localStorage.setItem('totalPrice',finalPrice);
-        document.querySelector('.total-price1').innerText=`Total Price : Rs. ${finalPrice}/- `;        
-        document.querySelector('.total-price').innerText=`Rs. ${finalPrice}/- `;       
+        localStorage.setItem('count', count);
+        document.querySelector('#count').innerText = `${count} `
+        var finalPrice = iprice * count;
+        localStorage.setItem('totalPrice', finalPrice);
+        document.querySelector('.total-price1').innerText = `Total Price : Rs. ${finalPrice}/- `;
+        document.querySelector('.total-price').innerText = `Rs. ${finalPrice}/- `;
 
 
     });
 
-    document.querySelector('#dec-btn').addEventListener('click',function(){
-        if(count>1){
-            count--;  
-            localStorage.setItem('count',count);
-        }        
-        document.querySelector('#count').innerText=`${count} `
-        var finalPrice=iprice*count;
-        localStorage.setItem('totalPrice',finalPrice);
-        document.querySelector('.total-price1').innerText=`Total Price : Rs. ${finalPrice}/- `;
-        document.querySelector('.total-price').innerText=`Rs. ${finalPrice}/- `;       
+    document.querySelector('#dec-btn').addEventListener('click', function() {
+        if (count > 1) {
+            count--;
+            localStorage.setItem('count', count);
+        }
+        document.querySelector('#count').innerText = `${count} `
+        var finalPrice = iprice * count;
+        localStorage.setItem('totalPrice', finalPrice);
+        document.querySelector('.total-price1').innerText = `Total Price : Rs. ${finalPrice}/- `;
+        document.querySelector('.total-price').innerText = `Rs. ${finalPrice}/- `;
 
 
     });
-
-    
-    
 </script>
+
 </html>

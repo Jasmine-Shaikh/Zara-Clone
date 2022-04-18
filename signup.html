@@ -1,84 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <title>Document</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@200;300&family=Mulish:wght@200;400&family=PT+Sans&family=Pacifico&family=Shizuru&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@200;300&family=Mulish:wght@200;400&family=PT+Sans&family=Pacifico&family=Shizuru&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./signup.css" />
-  </head>
+</head>
 
-  <body>
-   
+<body>
+
     <div id="headerContents">
-      <div id="headerLeft">
-          <div>
-              <input type="image" name="menu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU" id="menu" onclick="document.getElementById('menuModal').style.display='block'">
-          </div>
-          <div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
-          </div>
+        <div id="headerLeft">
+            <div>
+                <input type="image" name="menu" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU" id="menu" onclick="document.getElementById('menuModal').style.display='block'">
+            </div>
+            <div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+            </div>
 
-      </div>
-      <div id="headerRight">
-          <div id="headerRightLeft">
-              <a href="">SEARCH</a>
-          </div>
-          <div id="headerRightRight">
-              <a href="login.html" id="logInOption">LOG IN</a>
-              <a href="" id="helpOption">HELP</a>
-              <a href="">CART</a>
-          </div>
-      </div>
-  </div>
+        </div>
+        <div id="headerRight">
+            <div id="headerRightLeft">
+                <a href="">SEARCH</a>
+            </div>
+            <div id="headerRightRight">
+                <a href="login.html" id="logInOption">LOG IN</a>
+                <a href="" id="helpOption">HELP</a>
+                <a href="">CART</a>
+            </div>
+        </div>
+    </div>
 
 
     <div id="logpage">
-      <h3>PERSONAL DETAILS</h3>
-      <div id="check">
-        <div>
-          <input id="checkmarkp" type="radio" name="personal" />Personal
+        <h3>PERSONAL DETAILS</h3>
+        <div id="check">
+            <div>
+                <input id="checkmarkp" type="radio" name="personal" />Personal
+            </div>
+            <div><input id="checkmarkc" type="radio" name="personal" />Company</div>
         </div>
-        <div><input id="checkmarkc" type="radio" name="personal" />Company</div>
-      </div>
 
-      <div id="fill">
-        <form>
-          <input id="email" type="email" placeholder="EMAIL" required />
-          <br />
-          <input
-            id="password"
-            type="password"
-            placeholder="PASSWORD"
-            required
-          />
-          <input
-            id="reapeatpassword"
-            type="password"
-            placeholder="REPEAT PASSWORD"
-            required
-          />
-          <br />
+        <div id="fill">
+            <form>
+                <input id="email" type="email" placeholder="EMAIL" required />
+                <br />
+                <input id="password" type="password" placeholder="PASSWORD" required />
+                <input id="reapeatpassword" type="password" placeholder="REPEAT PASSWORD" required />
+                <br />
 
-          <input id="name" type="text" placeholder="NAME" required />
-          <input id="pin" type="number" placeholder="PINCODE" required />
-          <br />
-          <input id="address" type="text" placeholder="ADDRESS" required />
-          <input
-            id="optional"
-            type="text"
-            placeholder="more info optional"
-            required
-          />
-          <br />
-          <input id="locality" type="text" placeholder="LOCALITY" required />
-          <input id="city" type="text" placeholder="CITY" required />
-          <br />
-          <select id="state">
+                <input id="name" type="text" placeholder="NAME" required />
+                <input id="pin" type="number" placeholder="PINCODE" required />
+                <br />
+                <input id="address" type="text" placeholder="ADDRESS" required />
+                <input id="optional" type="text" placeholder="more info optional" required />
+                <br />
+                <input id="locality" type="text" placeholder="LOCALITY" required />
+                <input id="city" type="text" placeholder="CITY" required />
+                <br />
+                <select id="state">
             <option value="">STATE</option>
             <option value="Andaman and Nicobar Islands">
               Andaman and Nicobar Islands
@@ -121,48 +105,46 @@
             <option value="West Bengal">West Bengal</option>
             >
           </select>
-          <input id="stateR" type="text" placeholder="REGN INDIA" required />
+                <input id="stateR" type="text" placeholder="REGN INDIA" required />
 
-          <p style="font-size: 10px; margin-top: 15px; color: grey">PREFIX</p>
+                <p style="font-size: 10px; margin-top: 15px; color: grey">PREFIX</p>
 
-          <input id="mobile" type="number" placeholder="+91" required />
-          <input id="tel" type="number" placeholder="TELEPHONE" required />
+                <input id="mobile" type="number" placeholder="+91" required />
+                <input id="tel" type="number" placeholder="TELEPHONE" required />
 
-          <div id="checklast">
-            <div id="fb">
-              <input id="checkmark" type="checkbox" />I WISH TO RECEIVE ZARA
-              NEWS ON MY E-MAIL
-            </div>
-            <div id="fb">
-              <input id="checkmark1" type="checkbox" /> I ACCEPT THE PRIVACY
-              STATEMENT
-            </div>
-          </div>
+                <div id="checklast">
+                    <div id="fb">
+                        <input id="checkmark" type="checkbox" />I WISH TO RECEIVE ZARA NEWS ON MY E-MAIL
+                    </div>
+                    <div id="fb">
+                        <input id="checkmark1" type="checkbox" /> I ACCEPT THE PRIVACY STATEMENT
+                    </div>
+                </div>
 
-          <div id="bttn">
-            <button id="signUp()">
+                <div id="bttn">
+                    <button id="signUp()">
               <a href="./login.html"> CREATE ACCOUNT</a>
             </button>
-          </div>
-        </form>
-      </div>
+                </div>
+            </form>
+        </div>
     </div>
-      <!-- Footer -->
-      <div id="container-bottom">
+    <!-- Footer -->
+    <div id="container-bottom">
         <!-- START  -->
         <div class="box">
-                <div class="bottom-heading">HELP</div>
-                <div>SHOP AT ZARA.COM</div>
-                <div>PRODUCT</div>
-                <div>PAYMENT</div>
-                <div>SHIPPING</div>
-                <div>EXCHANGES AND RETURNS</div>
-                <div>SHOPS AND COMPANY</div>
-                <div>CLOTHES COLLECTION</div>
-                <!-- <div>PROGRAMME</div> -->
-                <div>MY ACCOUNT</div>
+            <div class="bottom-heading">HELP</div>
+            <div>SHOP AT ZARA.COM</div>
+            <div>PRODUCT</div>
+            <div>PAYMENT</div>
+            <div>SHIPPING</div>
+            <div>EXCHANGES AND RETURNS</div>
+            <div>SHOPS AND COMPANY</div>
+            <div>CLOTHES COLLECTION</div>
+            <!-- <div>PROGRAMME</div> -->
+            <div>MY ACCOUNT</div>
         </div>
-  
+
         <div class="box">
             <div class="bottom-heading">FOLLOW US</div>
             <div>NEWSLETTER</div>
@@ -170,46 +152,44 @@
             <div>FACEBOOK</div>
             <div>TWITTER</div>
             <div>PINTEREST</div>
-            <div>YOUTUBE</div>               
+            <div>YOUTUBE</div>
         </div>
-  
+
         <div class="box">
             <div class="bottom-heading">COMPANY</div>
             <div>ABOUT US</div>
             <div>JOIN LIFE</div>
             <div>OFFICES</div>
             <div>STORES</div>
-            <div>WORK WITH US</div>                              
+            <div>WORK WITH US</div>
         </div>
-  
+
         <div class="box">
             <div class="bottom-heading">POLICIES</div>
             <div>PRIVACY POLICY</div>
             <div>PURCHASE CONDITIONS</div>
-            <div>COOKIES SETTINGS</div>                                             
+            <div>COOKIES SETTINGS</div>
         </div>
-  
-  
-    
+
+
+
     </div>
-  <!-- Stop -->
+    <!-- Stop -->
     <div id="container-bottom1">
         <!-- start   -->
         <div>INDIA</div>
-        <div>ENGLISH
-            © ALL RIGHTS RESERVED</div>
-  
-  
+        <div>ENGLISH © ALL RIGHTS RESERVED</div>
+
+
         <!-- stop  -->
     </div>
-  
+
     <div id="container-bottom2">
         <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
         <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
         <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
     </div>
-  </body>
-  <script src="./signup.js"></script>
+</body>
+<script src="./signup.js"></script>
+
 </html>
-
-

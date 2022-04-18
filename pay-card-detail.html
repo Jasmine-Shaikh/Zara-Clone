@@ -1,137 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Process Order - Payment using Card</title>
-    <link rel="icon" type="image/x-icon" href="./fav icon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <style>
-        *{
+        * {
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
-           font-stretch: ultra-condensed;
+            font-stretch: ultra-condensed;
         }
-        #pay-main-container{
+        
+        #pay-main-container {
             width: 85%;
             margin: auto;
-            
         }
-        #heading{
+        
+        #heading {
             color: black;
             font-size: 20px;
             font-weight: bold;
             margin-top: 10%;
-            
         }
-
-        #card-container{
+        
+        #card-container {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: auto;
             gap: 20px;
             width: 70%;
         }
-        .remove-border{
+        
+        .remove-border {
             border-top-style: hidden;
             border-right-style: hidden;
             border-left-style: hidden;
             border-bottom-style: groove;
             margin-top: 25px;
-            
         }
-        #pay-icon{
+        
+        #pay-icon {
             border: 1px solid gray;
             width: 82px;
             height: 54px;
             margin-top: 80px;
             margin-bottom: 80px;
-
         }
-
-                /* //FIX button css code  */
-                #continue{
+        /* //FIX button css code  */
+        
+        #continue {
             display: flex;
             position: fixed;
             bottom: 25px;
-            right: 15px; 
-            
-            
+            right: 15px;
         }
-        #total-pirce-div{
+        
+        #total-pirce-div {
             display: flex;
             flex-direction: column;
-            height: 40px;     
+            height: 40px;
             justify-content: center;
             margin-right: 60px;
         }
-        #continue-button{
+        
+        #continue-button {
             background-color: black;
             color: white;
             padding-left: 90px;
             padding-right: 90px;
             height: 40px;
-            
         }
-
-            /* //FIX button css code  */
-
-            #headerContents {
-     display: flex;
-     justify-content: space-between;
-     width: 92%;
-     margin: auto;
-     margin-right: 10px;
-     margin-top: 15px;
-    
-    top: 0px;
-    
-   }
- 
-
-
- 
- #headerRight {
-     width: max-content;
-     display: flex;
-     
-     padding: 10px;
-     justify-content: space-between;  
-      
- }
- 
- 
- 
- #headerRightRight {
-     display: flex;
-     
-    
- }
- #help{
-    position: fixed;
-    right: 7.5%;
- }
- 
- #headerRightRight>a {
-     text-decoration: none;
-     padding: 0px 10px 0px 10px;
-     font-size: 13px;
-     color: rgb(41, 41, 41);
-     font-weight: 100;
-     font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
-     font-stretch: ultra-condensed;
-    
-     
- }
- 
-
- #logo {
-     width: 212px;
-     position: fixed;
- }
- /*-------------------- Header End------------------------- */
-
-    /* footer css part  */
-    #container-bottom{
+        /* //FIX button css code  */
+        
+        #headerContents {
+            display: flex;
+            justify-content: space-between;
+            width: 92%;
+            margin: auto;
+            margin-right: 10px;
+            margin-top: 15px;
+            top: 0px;
+        }
+        
+        #headerRight {
+            width: max-content;
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        
+        #headerRightRight {
+            display: flex;
+        }
+        
+        #help {
+            position: fixed;
+            right: 7.5%;
+        }
+        
+        #headerRightRight>a {
+            text-decoration: none;
+            padding: 0px 10px 0px 10px;
+            font-size: 13px;
+            color: rgb(41, 41, 41);
+            font-weight: 100;
+            font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+            font-stretch: ultra-condensed;
+        }
+        
+        #logo {
+            width: 212px;
+            position: fixed;
+        }
+        /*-------------------- Header End------------------------- */
+        /* footer css part  */
+        
+        #container-bottom {
             display: flex;
             flex-direction: row;
             gap: 30px;
@@ -139,74 +125,72 @@
             line-height: 25px;
             height: 600px;
             color: gray;
-
         }
-        #container-bottom1{
+        
+        #container-bottom1 {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             height: 150px;
             color: gray;
         }
-        #container-bottom2{
+        
+        #container-bottom2 {
             font-size: 10px;
             height: 250px;
             color: gray;
         }
-
-        .bottom-heading{
+        
+        .bottom-heading {
             font-size: 18px;
             font-weight: bold;
             line-height: 45px;
         }
-        #footer-html{
+        
+        #footer-html {
             margin-top: 90%;
         }
-
-
+        
         @media all and (min-width: 451px) and (max-width: 1050px) {
-            #heading{
-            color: black;
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 25%;
-            
+            #heading {
+                color: black;
+                font-size: 20px;
+                font-weight: bold;
+                margin-top: 25%;
+            }
         }
-
-    }
-
-
     </style>
 </head>
+
 <body>
     <!-- add heading part inside  -->
-    
-                    <!-- header section html  -->
-                    
-                    <header>
-                        <div id="headerContents">
-                            <div id="headerLeft">
-                              
-                                <div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
-                                </div>
-                
-                            </div>
-                           
-                                <div id="headerRightRight">
-                                    
-                                    <a id="help" href="">HELP</a>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </header>
-                <!-- end header section html  -->
+
+    <!-- header section html  -->
+
+    <header>
+        <div id="headerContents">
+            <div id="headerLeft">
+
+                <div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+                </div>
+
+            </div>
+
+            <div id="headerRightRight">
+
+                <a id="help" href="">HELP</a>
+
+            </div>
+        </div>
+        </div>
+    </header>
+    <!-- end header section html  -->
     <div id="pay-main-container">
-        
+
         <h2 id="heading">ENTER YOUR CARD DETAILS</h2>
         <img id="pay-icon" src="https://static.zara.net/static/images/payment/payment/icon-payment-visa.svg" alt="">
-       
+
         <div id="card-container">
             <input id="card-number" class="remove-border" type="number" placeholder="CARD NUMBER">
             <select class="remove-border" name="Month" id="month">
@@ -240,14 +224,14 @@
             <input class="remove-border" id="cvv" type="number" placeholder="CVV2 SECURITY CODE">
         </div>
 
-         <!-- design fix continue button  -->
-         <div id="continue">
+        <!-- design fix continue button  -->
+        <div id="continue">
             <div id="total-pirce-div">
                 <p id="total-price">Total Price</p>
-                
+
 
             </div>
-            
+
             <a href="./pay-card-detail.html">
                 <button id="continue-button">
                     CONTINUE
@@ -256,119 +240,116 @@
         </div>
 
 
-                <!-- Design Bottom view  -->
+        <!-- Design Bottom view  -->
 
-               <div id="footer-html">
-                   <!-- all footer html  -->
-                   <div id="container-bottom">
-                    <!-- START  -->
-                    <div class="box">
-                            <div class="bottom-heading">HELP</div>
-                            <div>SHOP AT ZARA.COM</div>
-                            <div>PRODUCT</div>
-                            <div>PAYMENT</div>
-                            <div>SHIPPING</div>
-                            <div>EXCHANGES AND RETURNS</div>
-                            <div>SHOPS AND COMPANY</div>
-                            <div>CLOTHES COLLECTION</div>
-                            <div>PROGRAMME</div>
-                            <div>MY ACCOUNT</div>
-                    </div>
-        
-                    <div class="box">
-                        <div class="bottom-heading">FOLLOW US</div>
-                        <div>NEWSLETTER</div>
-                        <div>INSTAGRAM</div>
-                        <div>FACEBOOK</div>
-                        <div>TWITTER</div>
-                        <div>PINTEREST</div>
-                        <div>YOUTUBE</div>               
-                    </div>
-        
-                    <div class="box">
-                        <div class="bottom-heading">COMPANY</div>
-                        <div>ABOUT US</div>
-                        <div>JOIN LIFE</div>
-                        <div>OFFICES</div>
-                        <div>STORES</div>
-                        <div>WORK WITH US</div>                              
-                    </div>
-        
-                    <div class="box">
-                        <div class="bottom-heading">POLICIES</div>
-                        <div>PRIVACY POLICY</div>
-                        <div>PURCHASE CONDITIONS</div>
-                        <div>COOKIES SETTINGS</div>                                             
-                    </div>
-        
-        
+        <div id="footer-html">
+            <!-- all footer html  -->
+            <div id="container-bottom">
+                <!-- START  -->
+                <div class="box">
+                    <div class="bottom-heading">HELP</div>
+                    <div>SHOP AT ZARA.COM</div>
+                    <div>PRODUCT</div>
+                    <div>PAYMENT</div>
+                    <div>SHIPPING</div>
+                    <div>EXCHANGES AND RETURNS</div>
+                    <div>SHOPS AND COMPANY</div>
+                    <div>CLOTHES COLLECTION</div>
+                    <div>PROGRAMME</div>
+                    <div>MY ACCOUNT</div>
+                </div>
+
+                <div class="box">
+                    <div class="bottom-heading">FOLLOW US</div>
+                    <div>NEWSLETTER</div>
+                    <div>INSTAGRAM</div>
+                    <div>FACEBOOK</div>
+                    <div>TWITTER</div>
+                    <div>PINTEREST</div>
+                    <div>YOUTUBE</div>
+                </div>
+
+                <div class="box">
+                    <div class="bottom-heading">COMPANY</div>
+                    <div>ABOUT US</div>
+                    <div>JOIN LIFE</div>
+                    <div>OFFICES</div>
+                    <div>STORES</div>
+                    <div>WORK WITH US</div>
+                </div>
+
+                <div class="box">
+                    <div class="bottom-heading">POLICIES</div>
+                    <div>PRIVACY POLICY</div>
+                    <div>PURCHASE CONDITIONS</div>
+                    <div>COOKIES SETTINGS</div>
+                </div>
+
+
                 <!-- STOP  -->
-                </div>
-        
-                <div id="container-bottom1">
-                    <!-- start   -->
-                    <div>INDIA</div>
-                    <div>ENGLISH
-                        © ALL RIGHTS RESERVED</div>
-        
-        
-                    <!-- stop  -->
-                </div>
-        
-                <div id="container-bottom2">
-                    <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
-                    <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
-                    <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
-                </div>
-        
+            </div>
 
-               </div>
+            <div id="container-bottom1">
+                <!-- start   -->
+                <div>INDIA</div>
+                <div>ENGLISH © ALL RIGHTS RESERVED</div>
 
-        
+
+                <!-- stop  -->
+            </div>
+
+            <div id="container-bottom2">
+                <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+                <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+                <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+            </div>
+
+
+        </div>
+
+
 
     </div>
-    
+
 </body>
 
 <script>
-    
     //    show total price code 
     var totalPrice;
-    if(JSON.parse(localStorage.getItem('cartData'))===null){
-        totalPrice=0;
-    }else{
-        totalPrice=JSON.parse(localStorage.getItem('cartData')).price;
+    if (JSON.parse(localStorage.getItem('cartData')) === null) {
+        totalPrice = 0;
+    } else {
+        totalPrice = JSON.parse(localStorage.getItem('cartData')).price;
     }
-    
-   document.getElementById('total-price').innerText=`Total RS.  ${totalPrice}`;
+
+    document.getElementById('total-price').innerText = `Total RS.  ${totalPrice}`;
 
     // after click continue show order sucess full code below
-    document.querySelector('#continue-button').addEventListener('click',function(){
+    document.querySelector('#continue-button').addEventListener('click', function() {
         event.preventDefault();
         // evt.preventDefault();
-        var cardNumber=document.querySelector('#card-number').value;
-        var month=document.querySelector('#month').value;
-        var year=document.querySelector('#year').value;
-        var holderName=document.querySelector('#card-holder').value;
-        var cvv=document.querySelector('#cvv').value;
-        console.log(cardNumber,month,year,holderName,cvv);
-        if(cardNumber && month && year && holderName && cvv && cardNumber.length==16 && cvv.length==3){
+        var cardNumber = document.querySelector('#card-number').value;
+        var month = document.querySelector('#month').value;
+        var year = document.querySelector('#year').value;
+        var holderName = document.querySelector('#card-holder').value;
+        var cvv = document.querySelector('#cvv').value;
+        console.log(cardNumber, month, year, holderName, cvv);
+        if (cardNumber && month && year && holderName && cvv && cardNumber.length == 16 && cvv.length == 3) {
             alert("Your Order Placed Sucessfully");
-            location.assign("./cart-page.html");  // add home page address
+            location.assign("./cart-page.html"); // add home page address
 
-        }else{
+        } else {
             alert("Enter Correct Payment Details");
             // location.reload();
 
-        } 
+        }
         // location.reload(); // reload same page
 
     });
 
-    
-    var totalPrice=localStorage.getItem('totalPrice');
-    document.querySelector('#total-price').innerText=`Total Rs. ${totalPrice}/-`
 
-
+    var totalPrice = localStorage.getItem('totalPrice');
+    document.querySelector('#total-price').innerText = `Total Rs. ${totalPrice}/-`
 </script>
+
 </html>

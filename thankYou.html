@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Thankyou for your purchase</title>
+</head>
+
+<style>
+    h2 {
+        font-weight: 100;
+        font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
+        font-stretch: ultra-condensed;
+        text-align: center;
+        line-height: 35px;
+    }
+    
+    #main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+        padding: 40px 60px 45px 60px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        border-radius: 5px;
+    }
+    
+    img {
+        width: 212px;
+        margin-bottom: 50px;
+    }
+    
+    button {
+        height: 30px;
+        border-style: none;
+        background-color: black;
+        color: white;
+        border-radius: 50px;
+        width: 70%;
+        padding: 8px;
+        font-weight: bold;
+        margin-top: 40px;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div id="container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="zara_logo">
+            <h2>Dear Customer,
+                <br>your order has been successfully placed.
+                <br> Thankyou for your purchase.
+            </h2>
+            <button id="goToHome" onclick="goToHomePage()">CONTINUE SHOPPING</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function goToHomePage() {
+        window.location.href = "homePage.html"
+    }
+</script>
+
+</html>
