@@ -2,6 +2,10 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    margin-top: 8px;
   }
   
   #headerLeft {
@@ -51,7 +55,7 @@
   
   #logo {
     width: 212px;
-    margin-left: 150px;
+    margin-left: 100px;
   }
   
   @media only screen and (max-width: 760px) {
@@ -82,8 +86,8 @@
      width: 60%;
      height: 50%;
    
-     margin-top: 120px;
-     margin-left: 250px;
+     margin-top: 180px;
+     margin-left: 160px;
  }
  
  #check {
@@ -109,18 +113,15 @@
  }
  
  
- #fill {
-    
-     margin-top: 15px;
- }
+
  
  #fill input {
      outline: none;
      border-top: 0;
      border-left: 0;
      border-right: 0;
-     margin-top: 30px;
-     padding: 10px;
+     margin-top: 25px;
+     padding: 5px;
  
  }
  /* 
@@ -272,11 +273,15 @@
  }
  #fb{
      font-size: 10px;
-     margin-top: 10px;
+    
+     color: grey;
  }
  
  
  @media only screen and (min-width:450px) and (max-width:800px){
+     #logo{
+         margin-left: auto;
+     }
      #logpage {
          width: 100%;
          height: 50%;
@@ -300,6 +305,37 @@
      
  
  }
+
+ @media only screen and (min-width:50px) and (max-width:449px){
+    #logo{
+        margin-left: auto;
+    }
+    #logpage {
+        display: inline-block;
+        /* flex-direction: column; */
+        width: 100%;
+        height: 50%;
+      
+        margin-top: 120px;
+        margin-left: 22px;
+    }
+   
+    #check div {
+        margin-left: 2px;
+        font-size: 12px;
+    }
+    #fill {
+        
+        margin-top: 40px;
+      
+    }
+    #fb{
+        font-size: 12px;
+        margin-top: 30px;
+    }
+    
+
+}
  /* footer */
 #container-bottom{
     display: flex;
@@ -309,8 +345,9 @@
     line-height: 25px;
     height: 600px;
     color: gray;
-    margin-left: 200px;
+    margin-left: 160px;
     margin-top: 300px;
+    margin-bottom: -200px;
   }
   #container-bottom1{
     display: flex;
@@ -318,7 +355,9 @@
     justify-content: space-between;
     height: 150px;
     color: gray;
-    margin-left: 200px;
+    margin-left: 160px;
+    margin-bottom: -50px;
+    font-size: 10px;
   }
   #container-bottom1 > div +div{
     margin-right: 200px;
@@ -327,11 +366,11 @@
     font-size: 10px;
     height: 250px;
     color: gray;
-    margin-left: 200px;
+    margin-left: 160px;
   }
   
   .bottom-heading{
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     line-height: 45px;
   }

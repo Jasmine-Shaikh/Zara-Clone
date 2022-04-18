@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="AddressPage.css" />
+    </head>
+    <body>
+        <header>
+            <div id="headerContents">
+                <div id="headerLeft">
+                    <div>
+                        <input
+                            type="image"
+                            name="menu"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOdHluCXbSOrJ-8iZQzmfCiR9LzhI23i8DQ&usqp=CAU"
+                            id="menu"
+                            onclick="document.getElementById('menuModal').style.display='block'"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg"
+                            alt="Zara_Logo"
+                            id="logo"
+                        />
+                    </div>
+                </div>
+                <div id="headerRight">
+                    <div id="headerRightLeft">
+                        <a href="search.html" id="search">SEARCH</a>
+                    </div>
+                    <div id="headerRightRight">
+                        <a href="login.html" id="logInOption">LOG IN</a>
+                        <a href="" id="helpOption">HELP</a>
+                        <a href="cart-page.html" id="cart">CART</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section>
+            <form>
+                <h3>Please Enter the delivery Details</h3>
+                <div id="select-option">
+                    <input type="radio" name="personal" id="personal" />
+                    <span> Personal</span>
+
+                    <input type="radio" name="personal" id="company" />
+                    <span>Company</span>
+                </div>
+                <div id="form-start">
+                    <input type="text" placeholder="NAME" id="name" required />
+
+                    <input
+                        type="number"
+                        placeholder="PINCODE"
+                        id="pincode"
+                        required
+                    />
+                    <input
+                        type="text"
+                        placeholder="ADDRESS"
+                        id="address"
+                        required
+                    />
+
+                    <input type="text" placeholder="Optional" />
+                    <input type="text" placeholder="LOCALITY" required />
+                    <input type="text" placeholder="CITY" required />
+                    <br />
+
+                    <select name="--" id="state" value="state">
+                        <option value="--">STATE</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">
+                            Arunachal Pradesh
+                        </option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">
+                            Himachal Pradesh
+                        </option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+
+                    <input
+                        type="text"
+                        id="region"
+                        placeholder=" REGION INDIA"
+                    />
+
+                    <div class="Number">
+                        <br />
+                        <input id="prefix" type="number" placeholder="+91" />
+                        <input
+                            id="telephone"
+                            type="number"
+                            placeholder="TELEPHONE"
+                            required
+                        />
+                    </div>
+                </div>
+                <div id="checkbox">
+                    <div class="option">
+                        <input id="checkmark" type="checkbox" />
+                        <p>I WISH TO RECEIVE ZARA NEWS ON MY E-MAIL</p>
+                    </div>
+                    <div class="option">
+                        <input id="checkmark1" type="checkbox" />
+                        <p>I ACCEPT THE PRIVACY STATEMENT</p>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <footer>
+            <!-- Design Bottom view  -->
+
+            <div id="container-bottom">
+                <!-- START  -->
+                <div class="box">
+                    <div class="bottom-heading">HELP</div>
+                    <div>SHOP AT ZARA.COM</div>
+                    <div>PRODUCT</div>
+                    <div>PAYMENT</div>
+                    <div>SHIPPING</div>
+                    <div>EXCHANGES AND RETURNS</div>
+                    <div>SHOPS AND COMPANY</div>
+                    <div>CLOTHES COLLECTION</div>
+                    <div>PROGRAMME</div>
+                    <div>MY ACCOUNT</div>
+                </div>
+
+                <div class="box">
+                    <div class="bottom-heading">FOLLOW US</div>
+                    <div>NEWSLETTER</div>
+                    <div>INSTAGRAM</div>
+                    <div>FACEBOOK</div>
+                    <div>TWITTER</div>
+                    <div>PINTEREST</div>
+                    <div>YOUTUBE</div>
+                </div>
+
+                <div class="box">
+                    <div class="bottom-heading">COMPANY</div>
+                    <div>ABOUT US</div>
+                    <div>JOIN LIFE</div>
+                    <div>OFFICES</div>
+                    <div>STORES</div>
+                    <div>WORK WITH US</div>
+                </div>
+
+                <div class="box">
+                    <div class="bottom-heading">POLICIES</div>
+                    <div>PRIVACY POLICY</div>
+                    <div>PURCHASE CONDITIONS</div>
+                    <div>COOKIES SETTINGS</div>
+                </div>
+
+                <!-- STOP  -->
+            </div>
+
+            <div id="container-bottom1">
+                <!-- start   -->
+                <div>INDIA</div>
+                <div>ENGLISH © ALL RIGHTS RESERVED</div>
+
+                <!-- stop  -->
+            </div>
+
+            <div id="container-bottom2">
+                <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+                <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+                <p>
+                    AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO
+                    (A CORUÑA), SPAIN
+                </p>
+            </div>
+
+            <div id="continue">
+                <div id="total-pirce-div">
+                    <p id="total-price">Total Price</p>
+                </div>
+
+                <a href="choose-payment.html">
+                    <button id="continue-button">CONTINUE</button>
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
