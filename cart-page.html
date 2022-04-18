@@ -6,40 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart - Zara India</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./fav icon/favicon.ico">
 
     <style>
         * {
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
         }
-        
+
         #main-container {
             width: 85%;
             margin: auto;
             margin-top: 50px;
             /* padding-top: 10%; */
         }
-        
+
         #cartNavBar {
             display: flex;
             flex-direction: row;
             gap: 10px;
             margin-top: 10%;
         }
-        
+
         #cart-nav {
             color: black;
             font-weight: bold;
             font-size: 22px;
         }
-        
+
         #wishlist-nav {
+
             font-size: 22px;
             font-weight: 200;
             color: gray;
+
         }
-        
+
         #empty {
             text-align: center;
             margin-top: 50%;
@@ -47,7 +49,7 @@
             color: black;
             font-weight: bold;
         }
-        
+
         #container-bottom {
             display: flex;
             flex-direction: row;
@@ -56,8 +58,9 @@
             line-height: 25px;
             height: 300px;
             color: gray;
+
         }
-        
+
         #container-bottom1 {
             display: flex;
             flex-direction: row;
@@ -65,39 +68,37 @@
             height: 150px;
             color: gray;
         }
-        
+
         #container-bottom2 {
             font-size: 10px;
             height: 250px;
             color: gray;
         }
-        
+
         .bottom-heading {
             font-size: 18px;
             font-weight: bold;
             line-height: 45px;
         }
-        
-        #product-details {
-            height: 900px;
-        }
-        
+
         #product-details {
             color: gray;
         }
-        
+
         .box>div:first-child {
             color: black;
         }
+
         /* //FIX button css code  */
-        
         #continue {
             display: flex;
             position: fixed;
             bottom: 25px;
             right: 15px;
+
+
         }
-        
+
         #total-pirce-div {
             display: flex;
             flex-direction: column;
@@ -105,17 +106,20 @@
             justify-content: center;
             margin-right: 60px;
         }
-        
+
         #continue-button {
             background-color: black;
             color: white;
             padding-left: 90px;
             padding-right: 90px;
             height: 40px;
+
         }
+
         /* //FIX button css code  */
+
         /*-------------------- Header ------------------------- */
-        
+
         #headerContents {
             display: flex;
             justify-content: space-between;
@@ -123,25 +127,36 @@
             margin: auto;
             margin-right: 10px;
             margin-top: 15px;
+
             top: 0px;
+
         }
-        
+
+
+
+
         #headerRight {
             width: max-content;
             display: flex;
+
             padding: 10px;
             justify-content: space-between;
+
         }
-        
+
+
+
         #headerRightRight {
             display: flex;
+
+
         }
-        
+
         #help {
             position: fixed;
             right: 7.5%;
         }
-        
+
         #headerRightRight>a {
             text-decoration: none;
             padding: 0px 10px 0px 10px;
@@ -150,15 +165,20 @@
             font-weight: 100;
             font-family: 'Neue-Helvetica', 'Helvetica', 'Arial', Sans-Serif;
             font-stretch: ultra-condensed;
+
+
         }
-        
+
+
         #logo {
             width: 212px;
             position: fixed;
         }
+
         /*-------------------- Header End------------------------- */
+
+
         /* // css for show cart product  */
-        
         #product-container {
             display: flex;
             gap: 20px;
@@ -166,54 +186,53 @@
             width: 100%;
             margin: auto;
             margin-bottom: 300px;
+
         }
-        
-        #productNamePara {
+        #productNamePara{
             margin-top: 70px;
         }
-        
+
         #inc-dec-btn {
             display: flex;
             flex-direction: row;
             align-items: center;
         }
-        
-        #left-side {
+        #left-side{
             width: 27%;
             /* border: 2px solid; */
         }
-        
-        #left-side-1 {
+        #left-side-1{
             width: 100%;
             /* border: 2px solid red; */
         }
-        
+
         #right-side {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-        
         @media all and (min-width: 450px) and (max-width: 850px) {
-            #left-side-1 {
-                width: 100%;
-                height: 100%;
-            }
-            #left-side {
-                width: 50%;
-            }
+            #left-side-1{
+            width: 100%;
+            height: 100%;
         }
-        
+        #left-side{
+            width: 50%;
+        }
+
+        }
         @media all and (min-width: 50px) and (max-width: 450px) {
-            #left-side-1 {
-                width: 100%;
-                height: 100%;
-            }
-            #left-side {
-                width: 100%;
-            }
+            #left-side-1{
+            width: 100%;
+            height: 100%;
         }
-        
+        #left-side{
+            width: 100%;
+        }
+        }
+
+      
+
         #inc-btn,
         #dec-btn {
             background-color: transparent;
@@ -221,8 +240,10 @@
             padding: 20px;
             font-size: 25px;
         }
+
+
         /* Use media query  */
-        
+
         @media all and (min-width: 451px) and (max-width: 1050px) {
             #cartNavBar {
                 display: flex;
@@ -230,9 +251,12 @@
                 gap: 10px;
                 margin-top: 20%;
             }
+
+
+
+
         }
-        /* <!-- add heading part inside --> */
-        
+
         @media all and (min-width: 88px) and (max-width: 450px) {
             #cartNavBar {
                 display: flex;
@@ -240,14 +264,17 @@
                 gap: 10px;
                 margin-top: 35%;
             }
-            /* <div><img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo"></div>
-         */
+
+
             #continue {
                 display: flex;
                 position: fixed;
                 bottom: 15px;
                 right: 10px;
+
+
             }
+
             #total-pirce-div {
                 display: flex;
                 flex-direction: column;
@@ -255,15 +282,17 @@
                 justify-content: center;
                 margin-right: 40px;
             }
+
             #continue-button {
                 background-color: black;
                 color: white;
                 padding-left: 70px;
                 padding-right: 70px;
                 height: 40px;
+
             }
-            /* <div id="headerRightRight"><a id="help" href="">HELP</a></div></div></div></header> */
-            /* <!-- end header section html --> */
+
+
         }
     </style>
 </head>
@@ -278,7 +307,8 @@
             <div id="headerLeft">
 
                 <div>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo" id="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/Zara_Logo.svg" alt="Zara_Logo"
+                        id="logo">
                 </div>
 
             </div>
@@ -300,7 +330,7 @@
 
         </div>
         <div id="cartNavBar">
-            <div id="cart-nav">CART</div>
+            <div id="cart-nav">CART ( 1 )</div>
             <div id="wishlist-nav">WISHLIST</div>
         </div>
 
@@ -311,9 +341,10 @@
             <!-- // design cart product shopw  -->
             <p id="productNamePara">CROPPED T-SHIRT</p>
             <div id="product-container">
-
+                
                 <div id="left-side">
-                    <img id="left-side-1" src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/378/2335159941_1_1_1.jpg?ts=1649342411033" alt="Unable to display image">
+                    <img id="left-side-1" src="https://static.zara.net/photos///2022/V/0/1/p/2335/159/941/2/w/378/2335159941_1_1_1.jpg?ts=1649342411033"
+                        alt="Unable to display image">
                 </div>
                 <div id="right-side">
                     <div>
@@ -389,7 +420,8 @@
         <div id="container-bottom1">
             <!-- start   -->
             <div>INDIA</div>
-            <div>ENGLISH © ALL RIGHTS RESERVED</div>
+            <div>ENGLISH
+                © ALL RIGHTS RESERVED</div>
 
 
             <!-- stop  -->
@@ -434,9 +466,10 @@
     document.querySelector('#count').innerText = `${count} `;
 
 
-    document.querySelector('#inc-btn').addEventListener('click', function() {
+    document.querySelector('#inc-btn').addEventListener('click', function () {
         count++;
         localStorage.setItem('count', count);
+        document.querySelector('#cart-nav').innerText=`CART ( ${count} )`;
         document.querySelector('#count').innerText = `${count} `
         var finalPrice = iprice * count;
         localStorage.setItem('totalPrice', finalPrice);
@@ -446,12 +479,13 @@
 
     });
 
-    document.querySelector('#dec-btn').addEventListener('click', function() {
+    document.querySelector('#dec-btn').addEventListener('click', function () {
         if (count > 1) {
             count--;
             localStorage.setItem('count', count);
         }
-        document.querySelector('#count').innerText = `${count} `
+        document.querySelector('#count').innerText = `${count} `;
+        document.querySelector('#cart-nav').innerText=`CART ( ${count} )`;
         var finalPrice = iprice * count;
         localStorage.setItem('totalPrice', finalPrice);
         document.querySelector('.total-price1').innerText = `Total Price : Rs. ${finalPrice}/- `;
@@ -459,6 +493,9 @@
 
 
     });
+
+
+
 </script>
 
 </html>
